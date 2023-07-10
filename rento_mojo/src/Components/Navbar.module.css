@@ -1,0 +1,146 @@
+.main{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 12%;
+}
+
+.logoDiv:hover{
+    cursor: pointer;
+}
+
+.logoImg{
+    width: 35%;
+    height: 4vh;
+    border-radius: 10% 50% 10% 50%;
+    background-color: red;
+}
+
+.logoInsideText{
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logoText{
+    color: #8D6E63;
+}
+
+.locationDiv{
+    display: flex;
+    width: 8%;
+    align-items: center;
+    color: black;
+}
+
+.locationDiv:hover{
+    cursor: pointer;
+}
+
+.location{
+    font-weight: 200;
+}
+
+.arrow{
+    width: 7%;
+    margin: auto;
+    height: 1vh;
+    border: 1px solid #6e6e6e;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+    margin-top: 3.1vh;
+}
+
+.searchDiv{
+    display: flex;
+    border: 1px solid black;
+    width: 55%;
+    align-items: center;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 10px;
+    padding-left: 10px;
+    background-color: rgb(241, 248, 250);
+    border-color: rgb(191, 240, 249);
+    padding-right: 10px;
+    transition: 1s box-shadow;
+}
+
+.searchDiv:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 1s background-color;
+    background-color: white;
+}
+
+.search{
+    width: 96%;
+    height: 4vh;
+    border: none;
+    background-color: transparent;
+}
+
+.searchIcon{
+    width: 1.9%;
+    height: 1.9vh;
+    background-color: transparent;
+}
+
+.search:focus{
+    outline: none;
+    border: none;
+}
+
+.search::placeholder{
+    font-size: 15px;
+}
+
+.cartDiv{
+    display: flex;
+    align-items: center;
+    width: 4%;
+    justify-content: space-around;
+}
+
+.cartDiv:hover{
+    cursor: pointer;
+}
+
+.cartImg{
+    width: 15px;
+    height: 15px;
+}
+
+.loginDiv{
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+.loginButton{
+    height: 6vh;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    transition: 0.5s color;
+}
+
+.loginButton:hover{
+    transition: 0.5s background-color,border-color-color;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
