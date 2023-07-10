@@ -1,0 +1,13 @@
+.main {
+  width: 100%;
+  position: relative;
+}
+
+.locationOverlay {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 3;
+}
