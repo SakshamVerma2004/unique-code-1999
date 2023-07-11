@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./Categories.module.css";
-import bed from "./bed.png";
-import fridge from "./fridge.png";
-import mobile from "./mobile-phone.png";
-import sofa from "./sofa.png";
-import weights from "./weights.png";
-import work from "./work-table.png";
+import bed from "./Assets/bed.png";
+import fridge from "./Assets/fridge.png";
+import mobile from "./Assets/mobile-phone.png";
+import sofa from "./Assets/sofa.png";
+import weights from "./Assets/weights.png";
+import work from "./Assets/work-table.png";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContextProvider";
 let Categories = () => {
+  let {showCity,setShowCity}=useContext(AuthContext);
   let navigate=useNavigate();
   let images = [sofa, bed, fridge, mobile, weights, work];
   let [category, setCategory] = useState([]);
@@ -21,7 +23,9 @@ let Categories = () => {
       });
   }, []);
   let moveToCategory=(category)=>{
-    navigate(`/${category}`)
+    if(!showCity){
+      navigate(`/${category}`);
+    }
   }
   return (
     <div className={styles.main}>

@@ -1,0 +1,50 @@
+.main{
+    width: 100%;
+    margin-top: 5vh;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.headingDiv{
+    width: 95%;
+    margin: auto;
+    text-align: left;
+}
+
+.heading{
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.benefitsDiv{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(3,29%);
+    gap: 20px 85px;
+    margin-top: 6vh;
+    margin: auto;
+}
+
+.benefits{
+    height: 30vh;
+    text-align: left;
+    width: 100%;
+}
+
+.image{
+    width: 20%;
+    height: 40%;
+}
+
+.head{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 0.5vh;
+}
+
+.desc{
+    letter-spacing: 1px;
+    text-align: justify;
+    color: gray;
+}
