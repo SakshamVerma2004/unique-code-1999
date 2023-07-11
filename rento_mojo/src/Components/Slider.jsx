@@ -8,6 +8,7 @@ let Slider = () => {
     "https://s.rmjo.in/Referral%20banner%20Web.jpg",
     "https://s.rmjo.in/Bajaj-Pay-HP-banner.jpg",
     "https://s.rmjo.in/Paytm-Offer-banner-HP.jpg",
+    "https://s.rmjo.in/Monsoon-offer-banner-HP.jpg"
   ];
   useEffect(() => {
     let interval = setInterval(() => {

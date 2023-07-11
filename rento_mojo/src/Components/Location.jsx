@@ -108,6 +108,13 @@ let Location = () => {
     city.name.toLowerCase().includes(searchValue.toLowerCase())
   );
 
+  let crossHandler = () => {
+    setSearchValue("");
+    if (searchValue.trim().length === 0) {
+      setShowCity(false);
+    }
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.searchDiv}>
@@ -118,6 +125,9 @@ let Location = () => {
           value={searchValue}
           onChange={handleSearch}
         />
+        <button className={styles.cross} onClick={crossHandler} disabled={!selectedCity}>
+          ✕
+        </button>
       </div>
       <div className={styles.locationDiv}>
         {filteredCityList.map((city, index) => (

@@ -5,6 +5,7 @@ let AuthContextProvider = ({ children }) => {
   let [changeColor, setChangeColor] = useState(false);
   let [selectedCity, setSelectedCity] = useState(null);
   let [close,setClose]=useState(false);
+  let [hoverShow,setHoverShow]=useState(false);
   let obj = {
     showCity,
     setShowCity,
@@ -12,7 +13,8 @@ let AuthContextProvider = ({ children }) => {
     setChangeColor,
     selectedCity,
     setSelectedCity,
-    close,setClose
+    close,setClose,
+    hoverShow,setHoverShow
   };
   return <AuthContext.Provider value={obj}>{children}</AuthContext.Provider>;
 };

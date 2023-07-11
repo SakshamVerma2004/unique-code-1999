@@ -46,7 +46,12 @@
 }
 
 .location{
-    font-weight: 200;
+    margin: auto;
+    color: red;
+}
+
+.notLocation{
+    margin: auto;
 }
 
 .arrow{
@@ -103,6 +108,10 @@
     font-size: 15px;
 }
 
+.search:disabled{
+    cursor: not-allowed;
+}
+
 .cartDiv{
     display: flex;
     align-items: center;
@@ -143,4 +152,8 @@
     color: red;
     border: 1px solid red;
     cursor: pointer;
+}
+
+.loginButton:disabled{
+    cursor: not-allowed;
 }

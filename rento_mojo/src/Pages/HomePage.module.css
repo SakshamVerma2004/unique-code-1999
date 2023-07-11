@@ -4,10 +4,23 @@
 }
 
 .locationOverlay {
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 9.5%;
   left: 0;
   width: 100%;
   background-color: white;
   z-index: 3;
+}
+
+.recSearchDiv{
+  width: 53%;
+  height: 200px;
+  margin: auto;
+  background-color: white;
+  left: 26.2%;
+  z-index: 3;
+  top: 6.8vh;
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 1000px;
 }
