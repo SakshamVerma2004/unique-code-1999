@@ -13,9 +13,7 @@ let Navbar = ({ onShow }) => {
   } = useContext(AuthContext);
   let navigate = useNavigate();
   let homeHandler = () => {
-    if (!setShowCity) {
-      navigate("/");
-    }
+    navigate("/");
   };
   return (
     <div className={styles.main}>
@@ -36,7 +34,7 @@ let Navbar = ({ onShow }) => {
           className={styles.search}
           placeholder="Search for products"
           disabled={showCity}
-          onMouseEnter={() => setHoverShow(true)}
+          onMouseEnter={() => setTimeout(() => setHoverShow(true), 1000)}
         />
         <img
           className={styles.searchIcon}

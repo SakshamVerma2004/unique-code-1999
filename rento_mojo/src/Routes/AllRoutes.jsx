@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom"
+import { useMemo } from "react";
 import HomePage from "../Pages/HomePage"
 import IndiviualCategory from "../Pages/IndiviualCategory";
 import IndiviualProduct from "../Pages/IndiviualProduct";
