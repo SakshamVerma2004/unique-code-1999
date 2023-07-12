@@ -8,7 +8,19 @@ import Categories from "../Components/Categories";
 import DisplayProducts from "../Components/DisplayProducts";
 import Benefits from "../Components/Benefits";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 let HomePage = () => {
+  let navigate = useNavigate();
+  let [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("https://rento-mojo-default-rtdb.firebaseio.com/categories.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
   let {
     showCity,
     setShowCity,
@@ -39,6 +51,9 @@ let HomePage = () => {
       setClose(true);
     }
   }, []);
+  let handleMovePage = (value) => {
+    navigate(`/${value}`);
+  };
   return (
     <div className={styles.main}>
       <Navbar onShow={handleShowCity} />
@@ -46,7 +61,31 @@ let HomePage = () => {
         <div
           className={styles.recSearchDiv}
           onMouseLeave={() => setHoverShow(false)}
-        ></div>
+        >
+          <div className={styles.hoverHeadingDiv}>
+            <p className={styles.hoverHeading}>
+              You can search out the products only from given options . Click on
+              any to see results .
+            </p>
+            <p className={styles.cancel} onClick={() => setHoverShow(false)}>
+              ✕
+            </p>
+          </div>
+          <div className={styles.buttonDiv}>
+            {data.map((item) => {
+              return (
+                <button
+                  className={styles.btn}
+                  value={item}
+                  onClick={() => handleMovePage(item)}
+                  key={item}
+                >
+                  {item}
+                </button>
+              );
+            })}
+          </div>
+        </div>
       ) : (
         ""
       )}

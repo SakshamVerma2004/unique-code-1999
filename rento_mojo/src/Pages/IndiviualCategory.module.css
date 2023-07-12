@@ -1,0 +1,273 @@
+.main{
+    width: 100%;
+}
+
+.categoryDiv{
+    width: 8%;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 1vh;
+    text-align: left;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: rgb(244, 247, 250);
+    border: 1px solid gray;
+}
+
+.cancel:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.flexDiv{
+    width: 80%;
+    margin: auto;
+    margin-top: 1vh;
+    display: flex;
+    padding-bottom: 15vh;
+    justify-content: space-between;
+}
+
+.filterDiv{
+    width: 20%;
+    height: 100%;
+}
+
+.productDiv{
+    width: 77%;
+    height: 100%;
+    display: grid;
+    gap: 2% 2%;
+    grid-template-columns: repeat(3,32%);
+}
+
+.rentDiv{
+    width: 90%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+    border: 1px solid rgb(205, 203, 203);
+}
+
+.rentButtonDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rentButton{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: lightseagreen;
+    color: black;
+    width: 30%;
+}
+
+.rentButton:hover{
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.sortDiv{
+    margin-top: 2vh;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    border: 1px solid rgb(205, 203, 203);
+    text-align: left;
+}
+
+.sortHeadingDiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resetButton{
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgb(192, 192, 192);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.resetButton:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: red;
+    border: none;
+}
+
+.sortButton{
+    margin-bottom: 1vh;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgb(205, 204, 204);
+    width: 99%;
+    letter-spacing: 1px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.sortButton:hover{
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+
+.sortHeading{
+    font-weight: 500;
+}
+
+.suggestionDiv{
+    width: 90%;
+    margin-top: 2vh;
+    padding: 0% 5% 10% 5%;
+    border: 2px solid rgb(109, 216, 252);
+    background-color: rgb(243, 250, 252);
+}
+
+.suggestionHeading{
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.suggestionDesc{
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-align: justify;
+    color: rgb(70, 70, 70);
+    margin-top: -1vh;
+}
+
+.suggestionInputDiv{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    border: 2px solid rgb(109, 216, 252);
+}
+
+.suggestionInput{
+    width: 100%;
+    border: none;
+}
+
+.suggestionInput:focus{
+    outline: none;
+    border: none;
+}
+
+.suggestionInput::placeholder{
+    letter-spacing: 1px;
+}
+
+.submit{
+    border: none;
+    background-color: white;
+    color: rgb(3, 174, 231);
+}
+
+.submit:disabled{
+    cursor: not-allowed;
+}
+
+.thanks{
+    font-size: 13px;
+    text-align: justify;
+}
+
+.image{
+    width: 100%;
+    height: 35vh;
+}
+
+.card{
+    border: 1px solid rgb(225, 224, 224);
+    padding-bottom: 8%;
+}
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.nameDiv{
+    width: 90%;
+    margin: auto;
+    height: 10%;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+.availableDiv{
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    height: 3.9vh;
+    margin-bottom: 2.9vh;
+}
+
+.availableHeading{
+    font-size: 2.3vh;
+    margin: auto;
+    color: #26C6DA;
+}
+
+.name{
+    margin: auto;
+    margin-top: 5%;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.infoDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+
+.deliveryDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 45%;
+    letter-spacing: 1px;
+}
+
+.deliveryImage{
+    width: 25%;
+}
+
+.quickDiv{
+    margin-bottom: 2vh;
+}
+
+.quickBtn{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+    letter-spacing: 1px;
+    color: #26C6DA;
+    border: 1px solid #26C6DA;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.quickBtn:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
