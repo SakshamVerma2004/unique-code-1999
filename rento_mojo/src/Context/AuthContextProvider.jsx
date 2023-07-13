@@ -6,6 +6,12 @@ let AuthContextProvider = ({ children }) => {
   let [selectedCity, setSelectedCity] = useState(null);
   let [close,setClose]=useState(false);
   let [hoverShow,setHoverShow]=useState(false);
+  let [isSignup,setIsSignup]=useState(false);
+  let [isLogin,setIsLogin]=useState(false);
+  let [loginName,setLoginName]=useState("");
+  let [loginEmail,setLoginEmail]=useState("");
+  let [showProfile, setShowProfile] = useState(false);
+  let [showRecommended,setShowRecommended]=useState(false);
   let obj = {
     showCity,
     setShowCity,
@@ -14,7 +20,13 @@ let AuthContextProvider = ({ children }) => {
     selectedCity,
     setSelectedCity,
     close,setClose,
-    hoverShow,setHoverShow
+    hoverShow,setHoverShow,
+    isLogin,setIsLogin,
+    isSignup,setIsSignup,
+    loginName,setLoginName,
+    loginEmail,setLoginEmail,
+    showRecommended,setShowRecommended,
+    showProfile, setShowProfile
   };
   return <AuthContext.Provider value={obj}>{children}</AuthContext.Provider>;
 };

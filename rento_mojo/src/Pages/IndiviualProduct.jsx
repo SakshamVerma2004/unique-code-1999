@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import virus from "../Components/Assets/virus.png";
-import cart from "../Components/Assets/shopping-cart.png";
 import delivery from "..//Components/Assets/delivery-truck.png";
 let IndiviualProduct = () => {
   let navigate = useNavigate();
@@ -13,6 +12,14 @@ let IndiviualProduct = () => {
   let { category, name } = useParams();
   let [features, setFeatures] = useState([]);
   let [recommended, setRecommended] = useState([]);
+  let [total, setTotal] = useState(1);
+  let [showTotal, setShowTotal] = useState();
+  let [discountedRent, setDiscountedRent] = useState(0);
+  let setMonths = (discount) => {
+    let newRent = data.monthly_rent * (1 - discount);
+    setTotal(newRent);
+    setShowTotal(newRent.toFixed(0));
+  };
   useEffect(() => {
     fetch("https://rento-mojo-default-rtdb.firebaseio.com/all_products.json")
       .then((res) => {
@@ -24,12 +31,19 @@ let IndiviualProduct = () => {
         });
         if (filteredData.length > 0) {
           setData(filteredData[0]);
+          setTotal(filteredData[0].monthly_rent);
+          setShowTotal(filteredData[0].monthly_rent.toFixed(0));
           if (filteredData[0].features.length > 0) {
             setFeatures(filteredData[0].features);
           }
         }
       });
   }, []);
+  useEffect(() => {
+    if (data) {
+      document.body.style.overflow = "auto";
+    }
+  }, [data]);
   useEffect(() => {
     fetch("https://rento-mojo-default-rtdb.firebaseio.com/all_products.json")
       .then((res) => {
@@ -164,15 +178,16 @@ let IndiviualProduct = () => {
             </p>
           </div>
           <div className={styles.btnDiv}>
-            <button className={styles.months}>3 +</button>
-            <button className={styles.months}>6 +</button>
-            <button className={styles.months}>12 +</button>
+            <button className={styles.months} onClick={()=>setMonths(0)}>
+              3 +
+            </button>
+            <button className={styles.months} onClick={() => setMonths(0.25)}>6 +</button>
+            <button className={styles.months} onClick={() => setMonths(0.40)}>12 +</button>
           </div>
           <div className={styles.infoPricesDiv}>
             <div className={styles.pricesDiv}>
               <p className={styles.infoPrices}>
-                ₹ {data.monthly_rent}{" "}
-                <span className={styles.nothing}>/mo</span>
+                ₹ {showTotal} <span className={styles.nothing}>/mo</span>
               </p>
               <p className={styles.siderole}>Monthly Rent</p>
             </div>
