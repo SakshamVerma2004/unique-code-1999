@@ -6,13 +6,39 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer.jsx";
 import delivery from "..//Components/Assets/delivery-truck.png";
 let IndiviualCategory = () => {
+  let [quickViewData, setQuickViewData] = useState(null);
+  let [selectedCard, setSelectedCard] = useState(null);
+  let [searchQuery, setSearchQuery] = useState("");
+  let [originalData, setOriginalData] = useState([]);
+  let [sortOrder, setSortOrder] = useState("");
   let navigate = useNavigate();
   let [hoveredCard, setHoveredCard] = useState(false);
   let [submitted, setSubmitted] = useState(false);
   let [submitDis, setSubmitDis] = useState(false);
   let [data, setData] = useState([]);
   let { category } = useParams();
+  let [isSorted, setIsSorted] = useState(false);
+  let [showQuickView, setShowQuickView] = useState(false);
   let [suggestionValue, setSuggestionValue] = useState("");
+  let [total, setTotal] = useState(1);
+  let [showTotal, setShowTotal] = useState();
+  let setMonths = (discount) => {
+    let newRent = quickViewData.monthly_rent * (1 - discount);
+    setTotal(newRent);
+    setShowTotal(newRent.toFixed(0));
+  };
+  useEffect(() => {
+    if (quickViewData) {
+      setShowTotal(quickViewData.monthly_rent);
+    }
+  }, [quickViewData]);
+  useEffect(() => {
+    if (showQuickView) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showQuickView]);
   useEffect(() => {
     fetch("https://rento-mojo-default-rtdb.firebaseio.com/all_products.json")
       .then((res) => {
@@ -20,11 +46,30 @@ let IndiviualCategory = () => {
       })
       .then((data) => {
         let filteredData = data.filter((item) => {
-          return item.category === category;
+          return (
+            item.category === category &&
+            item.name.toLowerCase().includes(searchQuery.toLowerCase())
+          );
         });
+        setOriginalData(filteredData);
+        if (isSorted) {
+          if (sortOrder === "asc") {
+            filteredData.sort((a, b) => a.monthly_rent - b.monthly_rent);
+          } else if (sortOrder === "desc") {
+            filteredData.sort((a, b) => b.monthly_rent - a.monthly_rent);
+          } else if (sortOrder === "refundable-asc") {
+            filteredData.sort(
+              (a, b) => a.refundable_deposit - b.refundable_deposit
+            );
+          } else if (sortOrder === "refundable-desc") {
+            filteredData.sort(
+              (a, b) => b.refundable_deposit - a.refundable_deposit
+            );
+          }
+        }
         setData(filteredData);
       });
-  }, []);
+  }, [category, sortOrder, isSorted, searchQuery]);
   let suggestionSubmitHandler = () => {
     if (suggestionValue.trim().length < 3) {
       setSubmitDis(true);
@@ -41,15 +86,22 @@ let IndiviualCategory = () => {
       }),
     });
   };
-  let handleNavigate = (category, name) => {
+  let handleNavigate = (index) => {
+    setQuickViewData(data[index]);
+    setShowQuickView(true);
+    setSelectedCard(index);
+  };
+  let handleCardNavigate = (category, name) => {
     navigate(`/${category}/${name}`);
   };
   return (
     <div className={styles.main}>
-      <Navbar />
+      <Navbar setSearchQuery={setSearchQuery} searchQuery={searchQuery} />
       <div className={styles.categoryDiv}>
         <p className={styles.category}>{category}</p>
-        <p className={styles.cancel} onClick={()=> navigate("/")}>✕</p>
+        <p className={styles.cancel} onClick={() => navigate("/")}>
+          ✕
+        </p>
       </div>
       <div className={styles.flexDiv}>
         <div className={styles.filterDiv}>
@@ -66,32 +118,76 @@ let IndiviualCategory = () => {
           <div className={styles.sortDiv}>
             <div className={styles.sortHeadingDiv}>
               <p className={styles.sortHeading}>Sort by :-</p>
-              <button className={styles.resetButton}>Reset</button>
+              <button
+                className={styles.resetButton}
+                onClick={() => {
+                  setData(originalData);
+                  setIsSorted(false);
+                }}
+              >
+                Reset
+              </button>
             </div>
-            <button className={styles.sortButton}>Monthly Rent in Asc</button>
-            <button className={styles.sortButton}>Monthly Rent in Desc</button>
-            <button className={styles.sortButton}>
+            <button
+              className={styles.sortButton}
+              onClick={() => {
+                setSortOrder("asc");
+                setIsSorted(true);
+              }}
+            >
+              Monthly Rent in Asc
+            </button>
+            <button
+              className={styles.sortButton}
+              onClick={() => {
+                setSortOrder("desc");
+                setIsSorted(true);
+              }}
+            >
+              Monthly Rent in Desc
+            </button>
+            <button
+              className={styles.sortButton}
+              onClick={() => {
+                setSortOrder("refundable-asc");
+                setIsSorted(true);
+              }}
+            >
               Refundable Deposit in Asc
             </button>
-            <button className={styles.sortButton}>
+            <button
+              className={styles.sortButton}
+              onClick={() => {
+                setSortOrder("refundable-desc");
+                setIsSorted(true);
+              }}
+            >
               Refundable Deposit in Desc
             </button>
           </div>
-          <div className={styles.suggestionDiv}>
+          <div
+            className={
+              showQuickView ? styles.suggestionDiv : styles.notSuggestionDiv
+            }
+          >
             <p className={styles.suggestionHeading}>
               What do you want us to launch next ?
             </p>
             <p className={styles.suggestionDesc}>Suggest us a product</p>
             <div className={styles.suggestionInputDiv}>
               <input
-                className={styles.suggestionInput}
+                className={
+                  showQuickView
+                    ? styles.suggestionInput
+                    : styles.notSuggestionInput
+                }
                 placeholder="Your suggestion"
                 type="text"
                 value={suggestionValue}
                 onChange={(e) => setSuggestionValue(e.target.value)}
               />
               <button
-                className={styles.submit}
+                className={showQuickView ? styles.submit : styles.notSubmit}
                 disabled={suggestionValue.trim().length < 3}
               >
                 Submit
@@ -108,57 +204,149 @@ let IndiviualCategory = () => {
           </div>
         </div>
         <div className={styles.productDiv}>
-          {data.map((item, index) => {
-            return (
-              <div
-                className={styles.card}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => handleNavigate(item.category, item.name)}
-              >
-                <img
-                  className={styles.image}
-                  alt="product-image"
-                  src={item.image}
-                />
-                <div className={styles.nameDiv}>
-                  <p className={styles.name}>{item.name}</p>
-                </div>
-                <div className={styles.infoDiv}>
-                  <p className={styles.price}>₹ {item.monthly_rent} / mo</p>
-                  <div className={styles.deliveryDiv}>
-                    <img
-                      className={styles.deliveryImage}
-                      alt="delivery-truck"
-                      src={delivery}
-                    />
-                    <p className={styles.deliveryTime}>
-                      {item.delivery_in_days} days
-                    </p>
+          {data
+            .filter((item) =>
+              item.name.toLowerCase().includes(searchQuery.toLowerCase())
+            )
+            .map((item, index) => {
+              return (
+                <div
+                  className={styles.card}
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  <img
+                    className={showQuickView ? styles.image : styles.notImage}
+                    alt="product-image"
+                    src={item.image}
+                    onClick={() => handleCardNavigate(item.category, item.name)}
+                  />
+                  <div
+                    className={styles.nameDiv}
+                    onClick={() => handleCardNavigate(item.category, item.name)}
+                  >
+                    <p className={styles.name}>{item.name}</p>
                   </div>
-                </div>
-                {hoveredCard !== index && (
-                  <div className={styles.availableDiv}>
-                    <p className={styles.availableHeading}>
-                      Rented Out For - 3 , 6 ,12 months
+                  <div
+                    className={styles.infoDiv}
+                    onClick={() => handleCardNavigate(item.category, item.name)}
+                  >
+                    <p className={styles.price}>
+                      ₹{" "}
+                      <span className={styles.monthly_rent}>
+                        {item.monthly_rent}
+                      </span>{" "}
+                      / mo
                     </p>
-                  </div>
-                )}
-                {hoveredCard === index && (
-                  <div className={styles.quickDiv}>
-                    <button
-                      className={styles.quickBtn}
-                      onClick={() => handleNavigate(item.category, item.name)}
+                    <div
+                      className={styles.deliveryDiv}
+                      onClick={() =>
+                        handleCardNavigate(item.category, item.name)
+                      }
                     >
-                      Quick View
-                    </button>
+                      <img
+                        className={styles.deliveryImage}
+                        alt="delivery-truck"
+                        src={delivery}
+                      />
+                      <p className={styles.deliveryTime}>
+                        {item.delivery_in_days} days
+                      </p>
+                    </div>
                   </div>
-                )}
-              </div>
-            );
-          })}
+                  {hoveredCard !== index && (
+                    <div className={styles.availableDiv}>
+                      <p className={styles.availableHeading}>
+                        Rented Out For - 3 , 6 ,12 months
+                      </p>
+                    </div>
+                  )}
+                  {hoveredCard === index && (
+                    <div className={styles.quickDiv}>
+                      <button
+                        className={styles.quickBtn}
+                        onClick={() => handleNavigate(index)}
+                      >
+                        Quick View
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
         </div>
       </div>
+      {showQuickView && quickViewData && (
+        <div className={styles.quickViewCardDiv}>
+          <div className={styles.quickViewCardImageDiv}>
+            <img
+              className={styles.quickViewImage}
+              alt="quick-view-image"
+              src={quickViewData.image}
+            />
+          </div>
+          <div className={styles.quickViewDetailsDiv}>
+            <p
+              className={styles.cancelBtn}
+              onClick={() => setShowQuickView(false)}
+            >
+              ✕
+            </p>
+            <p className={styles.quickViewHeading}>{quickViewData.name}</p>
+            <div className={styles.tenureDiv}>
+              <p className={styles.tenureHeading}>Tenure (in Months)</p>
+              <div className={styles.tenureButtonDiv}>
+                <button
+                  className={styles.tenureButton}
+                  onClick={() => setMonths(0)}
+                >
+                  3 +
+                </button>
+                <button
+                  className={styles.tenureButton}
+                  onClick={() => setMonths(0.25)}
+                >
+                  6 +
+                </button>
+                <button
+                  className={styles.tenureButton}
+                  onClick={() => setMonths(0.40)}
+                >
+                  12 +
+                </button>
+              </div>
+            </div>
+            <div className={styles.quickPricesDiv}>
+              <div className={styles.quickPrices}>
+                <p className={styles.quickPriceHeading}>Deposit</p>
+                <p className={styles.quickPriceText}>
+                  <span className={styles.ruppeeSymbol}>₹</span>{" "}
+                  {quickViewData.refundable_deposit}
+                </p>
+              </div>
+              <div className={styles.quickPrices}>
+                <p className={styles.quickPriceHeading}>Monthly Rent</p>
+                <p className={styles.quickPriceText}>
+                  <span className={styles.ruppeeSymbol}>₹</span>{" "}
+                  {showTotal}{" "}
+                  <span className={styles.ruppeeSymbol}>/ mo</span>
+                </p>
+              </div>
+            </div>
+            <div className={styles.quickButtonsDiv}>
+              <button
+                className={styles.viewDetailsBtn}
+                onClick={() =>
+                  handleCardNavigate(quickViewData.category, quickViewData.name)
+                }
+              >
+                View Details
+              </button>
+              <button className={styles.addToCartBtn}>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      )}
       <Footer />
     </div>
   );

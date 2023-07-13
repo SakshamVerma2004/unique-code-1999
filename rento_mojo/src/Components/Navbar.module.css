@@ -157,3 +157,23 @@
 .loginButton:disabled{
     cursor: not-allowed;
 }
+
+.doneLoginBtn{
+    height: 6vh;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 5px;
+    font-size: 13px;
+    transition: 0.5s color;
+}
+
+.doneLoginBtn:hover{
+    transition: 0.5s background-color,border-color-color;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}

@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { useNavigate } from "react-router-dom";
+import cart from "../Components/Assets/shopping-cart.png";
 import { AuthContext } from "../Context/AuthContextProvider";
-let Navbar = ({ onShow }) => {
+let Navbar = ({ onShow, setSearchQuery, searchQuery, onLogin }) => {
   let {
     selectedCity,
     setSelectedCity,
@@ -10,10 +11,19 @@ let Navbar = ({ onShow }) => {
     setShowCity,
     hoverShow,
     setHoverShow,
+    showRecommended,
+    setShowRecommended,
+    loginEmail,
+    loginName,
+    isLogin,
+    showProfile, setShowProfile
   } = useContext(AuthContext);
   let navigate = useNavigate();
   let homeHandler = () => {
     navigate("/");
+  };
+  let showProfileHandler = () => {
+    setShowProfile(!showProfile);
   };
   return (
     <div className={styles.main}>
@@ -34,6 +44,9 @@ let Navbar = ({ onShow }) => {
           className={styles.search}
           placeholder="Search for products"
           disabled={showCity}
+          value={searchQuery}
+          onClick={setShowRecommended(true)}
+          onChange={(e) => setSearchQuery(e.target.value)}
           onMouseEnter={() => setTimeout(() => setHoverShow(true), 1000)}
         />
         <img
@@ -43,17 +56,23 @@ let Navbar = ({ onShow }) => {
         />
       </div>
       <div className={styles.cartDiv}>
-        <img
-          className={styles.cartImg}
-          alt="cart-image"
-          src="https://th.bing.com/th/id/OIP.3kpi4mZ6JzM81fTpQlbHEgHaHJ?pid=ImgDet&rs=1"
-        />
+        <img className={styles.cartImg} alt="cart-image" src={cart} />
         <p className={styles.cart}>Cart</p>
       </div>
       <div className={styles.loginDiv}>
-        <button className={styles.loginButton} disabled={showCity}>
-          Login / Signup
-        </button>
+        {isLogin ? (
+          <button className={styles.doneLoginBtn} onClick={showProfileHandler}>
+            {loginName}
+          </button>
+        ) : (
+          <button
+            className={styles.loginButton}
+            disabled={showCity}
+            onClick={onLogin}
+          >
+            Login / Signup
+          </button>
+        )}
       </div>
     </div>
   );
