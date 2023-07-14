@@ -1,11 +1,33 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./IndiviualCategory.module.css";
 import { useParams } from "react-router-dom";
 import Navbar from "..//Components/Navbar.jsx";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer.jsx";
+import Login from "../Components/Login";
+import Signup from "../Components/Signup";
+import Location from "../Components/Location";
 import delivery from "..//Components/Assets/delivery-truck.png";
+import { AuthContext } from "../Context/AuthContextProvider";
+import swal from "sweetalert";
+import animal from "../Components/Assets/animal-3629.gif";
 let IndiviualCategory = () => {
+  let [confirmLogout, setConfirmLogout] = useState(false);
+  let [addedToCart, setAddedToCart] = useState(false);
+  let [monthsValue, setMonthsValue] = useState(3);
+  let [showLogin, setShowLogin] = useState(false);
+  let [showSignup, setShowSignup] = useState(false);
+  let {
+    isLogin,
+    setIsLogin,
+    loginName,
+    loginEmail,
+    showCity,
+    setShowCity,
+    selectedCity,
+    showProfile,
+    setShowProfile,
+  } = useContext(AuthContext);
   let [quickViewData, setQuickViewData] = useState(null);
   let [selectedCard, setSelectedCard] = useState(null);
   let [searchQuery, setSearchQuery] = useState("");
@@ -26,6 +48,47 @@ let IndiviualCategory = () => {
     let newRent = quickViewData.monthly_rent * (1 - discount);
     setTotal(newRent);
     setShowTotal(newRent.toFixed(0));
+  };
+  let cartNavigator = () => {
+    navigate("/cart");
+  };
+  let confirmLogoutHandler = () => {
+    setShowProfile(false);
+    setConfirmLogout(true);
+  };
+  let hideConfirmLogout = () => {
+    setConfirmLogout(false);
+  };
+  let hideLoginHandlerForYes = () => {
+    setIsLogin(false);
+    setConfirmLogout(false);
+  };
+  useEffect(() => {
+    if (showLogin || showSignup) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showLogin, showSignup]);
+  let showLoginHandler = () => {
+    setShowLogin(true);
+  };
+  let showSignupHandler = () => {
+    setShowSignup(true);
+  };
+  let hideSignupHandler = () => {
+    setShowSignup(false);
+  };
+  let showLoginAndHideSignup = () => {
+    setShowSignup(false);
+    setShowLogin(true);
+  };
+  let showSignupAndHideLogin = () => {
+    setShowLogin(false);
+    setShowSignup(true);
+  };
+  let hideLoginHandler = () => {
+    setShowLogin(false);
   };
   useEffect(() => {
     if (quickViewData) {
@@ -83,7 +146,13 @@ let IndiviualCategory = () => {
       body: JSON.stringify({
         date_DAY_MM_DD_YY: new Date().toDateString(),
         time_HH_MM_SS: new Date().toLocaleTimeString(),
+        Username: loginName,
+        Email: loginEmail,
+        Suggestion: suggestionValue,
       }),
+    }).then((res) => {
+      setSubmitted(true);
+      return res.json();
     });
   };
   let handleNavigate = (index) => {
@@ -94,15 +163,145 @@ let IndiviualCategory = () => {
   let handleCardNavigate = (category, name) => {
     navigate(`/${category}/${name}`);
   };
+  let handleShowCity = () => {
+    if (selectedCity) {
+      setShowCity(!showCity);
+    }
+  };
+  useEffect(() => {
+    if (showCity || showLogin || showSignup) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showCity, showLogin, showSignup]);
+  useEffect(() => {
+    if (showQuickView) {
+      fetch("https://rento-mojo-default-rtdb.firebaseio.com/cart.json")
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          let cartData = Object.values(data);
+          for (let i = 0; i < cartData.length; i++) {
+            if (
+              loginName === cartData[i].Username &&
+              loginEmail === cartData[i].Email &&
+              quickViewData.name === cartData[i].Item_Name
+            ) {
+              setAddedToCart(true);
+            } else {
+              setAddedToCart(false);
+            }
+          }
+        });
+    }
+  }, [showQuickView, quickViewData]);
+  let cartHandler = () => {
+    if (!isLogin) {
+      swal(
+        "Pending Login",
+        "You need to Login first to add items in cart",
+        "error"
+      );
+      return;
+    }
+    fetch("https://rento-mojo-default-rtdb.firebaseio.com/cart.json", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        date_DAY_MM_DD_YY: new Date().toDateString(),
+        time_HH_MM_SS: new Date().toLocaleTimeString(),
+        Item_Name: quickViewData.name,
+        Item_Image: quickViewData.image,
+        Item_Desc: quickViewData.desc,
+        Item_Monthly_Rent: quickViewData.monthly_rent,
+        Item_Refundable_Deposit: quickViewData.refundable_deposit,
+        Delivery_To_Which_City: selectedCity,
+        Username: loginName,
+        Email: loginEmail,
+      }),
+    }).then((res) => {
+      swal(`${quickViewData.name}`, "Product added to Cart", "success");
+      cartNavigator();
+      return res.json();
+    });
+  };
   return (
     <div className={styles.main}>
-      <Navbar setSearchQuery={setSearchQuery} searchQuery={searchQuery} />
+      <Navbar
+        setSearchQuery={setSearchQuery}
+        searchQuery={searchQuery}
+        onShow={handleShowCity}
+        onLogin={showLoginHandler}
+        onSignup={showSignupHandler}
+      />
+      {showProfile ? (
+        <div className={styles.profileDiv}>
+          <div className={styles.profileNameDiv}>
+            <p className={styles.profileName}>Name :-{loginName}</p>
+            <p
+              className={styles.cancelProfile}
+              onClick={() => setShowProfile(false)}
+            >
+              ✕
+            </p>
+          </div>
+          <p className={styles.profileName}>Email :-{loginEmail}</p>
+          <div className={styles.logoutDiv}>
+            <button className={styles.logoutBtn} onClick={confirmLogoutHandler}>
+              Logout
+            </button>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+      {confirmLogout ? (
+        <div className={styles.confirmLogoutDiv}>
+          <div className={styles.logoutImageDiv}>
+            <img
+              className={styles.logoutImage}
+              alt="logout-image"
+              src={animal}
+            />
+          </div>
+          <div className={styles.logoutInfoDiv}>
+            <p className={styles.logoutHeading}>
+              Are you sure you want to logout ?
+            </p>
+            <div className={styles.logoutButtonDiv}>
+              <button
+                className={styles.yesLogoutBtn}
+                onClick={hideLoginHandlerForYes}
+              >
+                Yes
+              </button>
+              <button
+                className={styles.noLogoutBtn}
+                onClick={hideConfirmLogout}
+              >
+                No
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       <div className={styles.categoryDiv}>
         <p className={styles.category}>{category}</p>
         <p className={styles.cancel} onClick={() => navigate("/")}>
           ✕
         </p>
       </div>
+      {showCity && (
+        <div className={styles.locationOverlay}>
+          <Location />
+        </div>
+      )}
       <div className={styles.flexDiv}>
         <div className={styles.filterDiv}>
           <div className={styles.rentDiv}>
@@ -188,11 +387,21 @@ let IndiviualCategory = () => {
               />
               <button
                 className={showQuickView ? styles.submit : styles.notSubmit}
-                disabled={suggestionValue.trim().length < 3}
+                disabled={
+                  suggestionValue.trim().length < 3 || !isLogin || submitted
+                }
+                onClick={suggestionSubmitHandler}
               >
-                Submit
+                {submitted ? "Submitted" : "Submit"}
               </button>
             </div>
+            {!isLogin ? (
+              <p className={styles.doLoginText}>
+                You need to Login first to give a suggestion .
+              </p>
+            ) : (
+              ""
+            )}
             {submitted ? (
               <p className={styles.thanks}>
                 Thanks for giving us your suggestion . We will positively look
@@ -298,19 +507,28 @@ let IndiviualCategory = () => {
               <div className={styles.tenureButtonDiv}>
                 <button
                   className={styles.tenureButton}
-                  onClick={() => setMonths(0)}
+                  onClick={() => {
+                    setMonths(0);
+                    setMonthsValue(3);
+                  }}
                 >
                   3 +
                 </button>
                 <button
                   className={styles.tenureButton}
-                  onClick={() => setMonths(0.25)}
+                  onClick={() => {
+                    setMonths(0.25);
+                    setMonthsValue(6);
+                  }}
                 >
                   6 +
                 </button>
                 <button
                   className={styles.tenureButton}
-                  onClick={() => setMonths(0.40)}
+                  onClick={() => {
+                    setMonths(0.4);
+                    setMonthsValue(12);
+                  }}
                 >
                   12 +
                 </button>
@@ -325,10 +543,11 @@ let IndiviualCategory = () => {
                 </p>
               </div>
               <div className={styles.quickPrices}>
-                <p className={styles.quickPriceHeading}>Monthly Rent</p>
+                <p className={styles.quickPriceHeading}>
+                  Monthly Rent (For {monthsValue} months)
+                </p>
                 <p className={styles.quickPriceText}>
-                  <span className={styles.ruppeeSymbol}>₹</span>{" "}
-                  {showTotal}{" "}
+                  <span className={styles.ruppeeSymbol}>₹</span> {showTotal}{" "}
                   <span className={styles.ruppeeSymbol}>/ mo</span>
                 </p>
               </div>
@@ -342,12 +561,36 @@ let IndiviualCategory = () => {
               >
                 View Details
               </button>
-              <button className={styles.addToCartBtn}>Add To Cart</button>
+              {addedToCart ? (
+                <button className={styles.addToCartBtn} onClick={cartNavigator}>
+                  Already in the Cart
+                </button>
+              ) : (
+                <button className={styles.addToCartBtn} onClick={cartHandler}>
+                  Add To Cart
+                </button>
+              )}
             </div>
           </div>
         </div>
       )}
       <Footer />
+      {showLogin ? (
+        <Login
+          onHide={hideLoginHandler}
+          showSignupAndHideLogin={showSignupAndHideLogin}
+        />
+      ) : (
+        ""
+      )}
+      {showSignup ? (
+        <Signup
+          showLoginAndHideSignup={showLoginAndHideSignup}
+          onHide={hideSignupHandler}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

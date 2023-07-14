@@ -6,8 +6,10 @@
     background-color: white;
     padding-top: 30px;
     padding-bottom: 40px;
-    z-index: 2;
+    z-index: 20;
     height: 52vh;
+    position: fixed;
+    left: 10%;
 }
 
 .searchDiv{

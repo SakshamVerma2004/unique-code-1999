@@ -88,8 +88,6 @@ let HomePage = () => {
     setShowLogin(false);
   };
   let hideLoginHandlerForYes = () => {
-    localStorage.removeItem("loginKey");
-    localStorage.removeItem("loginExpiration");
     setIsLogin(false);
     setConfirmLogout(false);
   };

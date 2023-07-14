@@ -22,6 +22,9 @@ let Navbar = ({ onShow, setSearchQuery, searchQuery, onLogin }) => {
   let homeHandler = () => {
     navigate("/");
   };
+  let cartNavigator=()=>{
+    navigate("/cart");
+  }
   let showProfileHandler = () => {
     setShowProfile(!showProfile);
   };
@@ -55,7 +58,7 @@ let Navbar = ({ onShow, setSearchQuery, searchQuery, onLogin }) => {
           alt="search-icon"
         />
       </div>
-      <div className={styles.cartDiv}>
+      <div className={styles.cartDiv} onClick={cartNavigator}>
         <img className={styles.cartImg} alt="cart-image" src={cart} />
         <p className={styles.cart}>Cart</p>
       </div>
