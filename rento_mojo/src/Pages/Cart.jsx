@@ -1,4 +1,3 @@
-import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { useContext, useEffect, useState } from "react";
 import styles from "./Cart.module.css";
@@ -6,13 +5,15 @@ import Login from "../Components/Login";
 import Signup from "../Components/Signup";
 import { AuthContext } from "../Context/AuthContextProvider";
 import { useNavigate } from "react-router-dom";
+import Checkout from "../Components/Checkout";
 let Cart = () => {
   let navigate = useNavigate();
-  let [total, setTotal] = useState(0);
+  let [showCheckout, setShowCheckout] = useState(false);
   let [showCartDiv, setShowCartDiv] = useState(false);
   let [data, setData] = useState([]);
   let [searchQuery, setSearchQuery] = useState("");
-  let { isLogin, loginName, loginEmail } = useContext(AuthContext);
+  let { isLogin, loginName, loginEmail, total, setTotal } =
+    useContext(AuthContext);
   let [showLogin, setShowLogin] = useState(false);
   let [showSignup, setShowSignup] = useState(false);
 
@@ -71,6 +72,7 @@ let Cart = () => {
       setShowCartDiv(true);
       document.body.style.overflow = "hidden";
     } else {
+      setShowCartDiv(false);
       document.body.style.overflow = "auto";
     }
   }, [data.length]);
@@ -80,18 +82,33 @@ let Cart = () => {
       .then((res) => res.json())
       .then((cartData) => {
         let filteredData = Object.keys(cartData)
-          .filter((key) => cartData[key].Username === loginName && cartData[key].Email === loginEmail)
+          .filter(
+            (key) =>
+              cartData[key].Username === loginName &&
+              cartData[key].Email === loginEmail
+          )
           .map((key) => ({
             ...cartData[key],
             id: key,
           }));
-  
+
         setData(filteredData);
       });
   }, [loginName, loginEmail]);
   let handleRemove = async (index) => {
     let itemId = data[index].id;
+    let itemData = data[index];
     try {
+      await fetch(
+        `https://rento-mojo-default-rtdb.firebaseio.com/search_items.json`,
+        {
+          method: "POST",
+          body: JSON.stringify(itemData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       await fetch(
         `https://rento-mojo-default-rtdb.firebaseio.com/cart/${itemId}.json`,
         {
@@ -177,11 +194,17 @@ let Cart = () => {
               </p>
             </div>
             <div className={styles.proceedDiv}>
-              <button className={styles.proceedBtn}>Proceed to Checkout</button>
+              <button
+                className={styles.proceedBtn}
+                onClick={() => setShowCheckout(!showCheckout)}
+              >
+                Proceed to Checkout
+              </button>
             </div>
           </div>
         </div>
       )}
+      {showCheckout && filteredData.length > 0 && <Checkout />}
       {showLogin ? (
         <Login
           onHide={hideLoginHandler}

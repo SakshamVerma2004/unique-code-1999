@@ -83,3 +83,443 @@
     color: black;
     letter-spacing: 1px;
 }
+
+@media all and (max-width:1300px){
+    .main{
+        width: 50%;
+        height: 50vh;
+        margin: auto;
+        border-radius: 10px;
+        position: fixed;
+        z-index: 10;
+        top: 25vh;
+        left: 35vh;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.71) 0px 5px 15px 5000px;
+    }
+    
+    .imageDiv{
+        width: 50%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .inputDiv{
+        width: 45%;
+        padding-left: 3%;
+        padding-right: 2%;
+        padding-top: 3%;
+        text-align: left;
+        background-color: white;
+    }
+    
+    .inputHeadingDiv{
+        width: 90%;
+        display: flex;
+        height: 5vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .inputHeading{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .cancel:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .nameInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .emailInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .btnDiv{
+        width: 90%;
+        margin-top: 3vh;
+    }
+    
+    .createBtn{
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    
+    .createBtn:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    
+    .link{
+        color: black;
+        letter-spacing: 1px;
+    }
+}
+
+@media all and (max-width:1100px){
+    .main{
+        width: 50%;
+        height: 40vh;
+        margin: auto;
+        border-radius: 10px;
+        position: fixed;
+        z-index: 10;
+        top: 25vh;
+        left: 30vh;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.71) 0px 5px 15px 5000px;
+    }
+    
+    .imageDiv{
+        width: 50%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .inputDiv{
+        width: 45%;
+        padding-left: 3%;
+        padding-right: 2%;
+        padding-top: 3%;
+        text-align: left;
+        background-color: white;
+    }
+    
+    .inputHeadingDiv{
+        width: 90%;
+        display: flex;
+        height: 5vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .inputHeading{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .cancel:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .nameInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .emailInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .btnDiv{
+        width: 90%;
+        margin-top: 3vh;
+    }
+    
+    .createBtn{
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    
+    .createBtn:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    
+    .link{
+        color: black;
+        letter-spacing: 1px;
+    }
+}
+
+@media all and (max-width:900px){
+    .main{
+        width: 50%;
+        height: 40vh;
+        margin: auto;
+        border-radius: 10px;
+        position: fixed;
+        z-index: 10;
+        top: 25vh;
+        left: 25vh;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.71) 0px 5px 15px 5000px;
+    }
+    
+    .imageDiv{
+        width: 50%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .inputDiv{
+        width: 45%;
+        padding-left: 3%;
+        padding-right: 2%;
+        padding-top: 3%;
+        text-align: left;
+        background-color: white;
+    }
+    
+    .inputHeadingDiv{
+        width: 90%;
+        display: flex;
+        height: 5vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .inputHeading{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .cancel:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .nameInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .emailInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .btnDiv{
+        width: 90%;
+        margin-top: 3vh;
+    }
+    
+    .createBtn{
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    
+    .createBtn:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    
+    .link{
+        color: black;
+        letter-spacing: 1px;
+    }
+}
+
+@media all and (max-width:700px){
+    .main{
+        width: 60%;
+        height: 40vh;
+        margin: auto;
+        border-radius: 10px;
+        position: fixed;
+        z-index: 10;
+        top: 25vh;
+        left: 15vh;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.71) 0px 5px 15px 5000px;
+    }
+    
+    .imageDiv{
+        width: 50%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .inputDiv{
+        width: 45%;
+        padding-left: 3%;
+        padding-right: 2%;
+        padding-top: 3%;
+        text-align: left;
+        background-color: white;
+    }
+    
+    .inputHeadingDiv{
+        width: 90%;
+        display: flex;
+        height: 5vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .inputHeading{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .cancel:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .nameInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .emailInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .btnDiv{
+        width: 90%;
+        margin-top: 3vh;
+    }
+    
+    .createBtn{
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    
+    .createBtn:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    
+    .link{
+        color: black;
+        letter-spacing: 1px;
+    }
+}
+
+@media all and (max-width:500px){
+    .main{
+        width: 80%;
+        height: 35vh;
+        margin: auto;
+        border-radius: 10px;
+        position: fixed;
+        z-index: 10;
+        top: 10vh;
+        left: 5vh;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.71) 0px 5px 15px 5000px;
+    }
+    
+    .imageDiv{
+        width: 50%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .inputDiv{
+        width: 45%;
+        padding-left: 3%;
+        padding-right: 2%;
+        padding-top: 3%;
+        text-align: left;
+        background-color: white;
+    }
+    
+    .inputHeadingDiv{
+        width: 90%;
+        display: flex;
+        height: 5vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .inputHeading{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .cancel:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .nameInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .emailInput{
+        padding: 10px;
+        width: 83%;
+    }
+    
+    .btnDiv{
+        width: 90%;
+        margin-top: 3vh;
+    }
+    
+    .createBtn{
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    
+    .createBtn:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    
+    .link{
+        color: black;
+        letter-spacing: 1px;
+    }
+}

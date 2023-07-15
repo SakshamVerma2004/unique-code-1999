@@ -3,8 +3,10 @@ import gif from "./Assets/rocket-3972.gif";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContextProvider";
 let Login = ({ onHide, showSignupAndHideLogin }) => {
+  let navigate = useNavigate();
   let {
     isLogin,
     setIsLogin,
@@ -16,6 +18,26 @@ let Login = ({ onHide, showSignupAndHideLogin }) => {
   let [name, setName] = useState("");
   let [email, setEmail] = useState("");
   let handleLogin = () => {
+    if (name === "Admin" && email === "admin@gmail.com") {
+      fetch("https://rento-mojo-default-rtdb.firebaseio.com/login.json", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          date_DAY_MM_DD_YY: new Date().toDateString(),
+          time_HH_MM_SS: new Date().toLocaleTimeString(),
+          Username: "Admin",
+          Email: "admin@gmail.com",
+        }),
+      })
+      .then((res)=>{
+        swal("Hello Boss","Time to check the records","success");
+        navigate("/admin");
+        return res.json();
+      })
+      return ;
+    }
     let pattern = /^[a-zA-Z0-9]+([._][a-zA-Z0-9]+)*@gmail.com$/;
     if (name.trim().length < 3) {
       swal("Invalid Name", "Name length cannot be less than 3", "error");

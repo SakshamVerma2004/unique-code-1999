@@ -54,3 +54,127 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+@media all and (max-width:630px){
+    *{
+        font-size: 10px;
+    }
+    .main{
+        width: 100%;
+        background-color: aliceblue;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .headingDiv{
+        width: 80%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .heading{
+        color: rgb(85, 85, 85);
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .para{
+        color: gray;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+    
+    .flexDiv{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin: auto;
+    }
+    
+    .infoHeading{
+        color: rgb(57, 57, 57);
+        font-weight: 400;
+    }
+    
+    .infoDiv a{
+        text-decoration: none;
+        color: gray;
+    }
+    
+    .infoDiv div{
+        margin-bottom: 1.5vh;
+    }
+    
+    .infoDiv a:hover{
+        text-decoration: underline;
+    }
+    
+    .btn{
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 2px;
+        border-radius: 5px;
+    }
+}
+
+@media all and (max-width:450px){
+    *{
+        font-size: 10px;
+    }
+    .main{
+        width: 100%;
+        background-color: aliceblue;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .headingDiv{
+        width: 80%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .heading{
+        color: rgb(85, 85, 85);
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .para{
+        color: gray;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+    
+    .flexDiv{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin: auto;
+    }
+    
+    .infoHeading{
+        color: rgb(57, 57, 57);
+        font-weight: 400;
+    }
+    
+    .infoDiv a{
+        text-decoration: none;
+        color: gray;
+    }
+    
+    .infoDiv div{
+        margin-bottom: 1.5vh;
+    }
+    
+    .infoDiv a:hover{
+        text-decoration: underline;
+    }
+    
+    .btn{
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 2px;
+        border-radius: 5px;
+    }
+}

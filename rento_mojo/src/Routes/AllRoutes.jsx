@@ -3,6 +3,7 @@ import HomePage from "../Pages/HomePage"
 import IndiviualCategory from "../Pages/IndiviualCategory";
 import IndiviualProduct from "../Pages/IndiviualProduct";
 import Cart from "../Pages/Cart";
+import Admin from "../Pages/Admin";
 
 let AllRoutes=()=>{
     return (
@@ -11,6 +12,7 @@ let AllRoutes=()=>{
             <Route path="/:category" element={<IndiviualCategory/>}></Route>
             <Route path="/:category/:name" element={<IndiviualProduct/>}></Route>
             <Route path="/cart" element={<Cart/>}></Route>
+            <Route path="/admin" element={<Admin/>}></Route>
         </Routes>
     )
 }
