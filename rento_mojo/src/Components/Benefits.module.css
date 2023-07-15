@@ -48,3 +48,219 @@
     text-align: justify;
     color: gray;
 }
+
+@media all and (max-width:1300px){
+    .main{
+        width: 100%;
+        margin-top: 5vh;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    
+    .headingDiv{
+        width: 95%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .heading{
+        font-weight: 500;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    
+    .benefitsDiv{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(3,29%);
+        gap: 20px 85px;
+        margin-top: 6vh;
+        margin: auto;
+    }
+    
+    .benefits{
+        height: 30vh;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .image{
+        width: 20%;
+        height: 30%;
+    }
+    
+    .head{
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-top: 0.5vh;
+    }
+    
+    .desc{
+        letter-spacing: 1px;
+        text-align: justify;
+        color: gray;
+    }
+    
+}
+
+@media all and (max-width:1000px){
+    .main{
+        width: 100%;
+        margin-top: 5vh;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    
+    .headingDiv{
+        width: 95%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .heading{
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .benefitsDiv{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,27%);
+        gap: 20px 85px;
+        margin-top: 6vh;
+        margin: auto;
+    }
+    
+    .benefits{
+        height: 30vh;
+        text-align: left;
+        font-size: 10px;
+        width: 100%;
+    }
+    
+    .image{
+        width: 20%;
+        height: 25%;
+    }
+    
+    .head{
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-top: 0.5vh;
+    }
+    
+    .desc{
+        letter-spacing: 1px;
+        text-align: justify;
+        color: gray;
+    }
+    
+}
+
+@media all and (max-width:600px){
+    .main{
+        width: 100%;
+        margin-top: 5vh;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    
+    .headingDiv{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .heading{
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .benefitsDiv{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,23%);
+        gap: 20px 85px;
+        margin-top: 6vh;
+        margin: auto;
+    }
+    
+    .benefits{
+        height: 30vh;
+        text-align: left;
+        font-size: 10px;
+        width: 100%;
+    }
+    
+    .image{
+        width: 20%;
+        height: 15%;
+    }
+    
+    .head{
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-top: 0.5vh;
+    }
+    
+    .desc{
+        letter-spacing: 1px;
+        text-align: justify;
+        color: gray;
+    }
+}
+
+@media all and (max-width:500px){
+    .main{
+        width: 100%;
+        margin-top: 5vh;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    
+    .headingDiv{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .heading{
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .benefitsDiv{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,27%);
+        gap: 1px 35px;
+        margin-top: 6vh;
+        margin: auto;
+    }
+    
+    .benefits{
+        height: 20vh;
+        text-align: left;
+        font-size: 10px;
+        width: 100%;
+    }
+    
+    .image{
+        width: 20%;
+        height: 15%;
+    }
+    
+    .head{
+        font-size: 8px;
+        margin-top: 0.5vh;
+    }
+    
+    .desc{
+        text-align: justify;
+        font-size: 9px;
+        color: gray;
+    }
+}

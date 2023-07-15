@@ -191,3 +191,591 @@
   color: white;
   background-color: red;
 }
+
+@media all and (max-width:1000px){
+  .main {
+    width: 100%;
+    position: relative;
+  }
+  
+  .locationOverlay {
+    position: fixed;
+    top: 9.5%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+  }
+  
+  .recSearchDiv {
+    width: 51%;
+    margin: auto;
+    background-color: white;
+    left: 26.2%;
+    z-index: 3;
+    top: 6.8vh;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 1000px;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  
+  .hoverHeading {
+    color: gray;
+    letter-spacing: 1px;
+  }
+  
+  .buttonDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+  }
+  
+  .hoverHeadingDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancel:hover {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .btn {
+    letter-spacing: 1px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid rgb(230, 229, 229);
+    color: #e91e63;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profileDiv {
+    width: 20%;
+    padding: 10px;
+    position: fixed;
+    left: 76%;
+    background-color: white;
+    z-index: 15;
+    text-align: left;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+  }
+  
+  .logoutDiv {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logoutBtn {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+  }
+  
+  .logoutBtn:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .profileNameDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+  }
+  
+  .profileName {
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .cancelProfile:hover{
+    cursor: pointer;
+    color: red;
+  }
+  
+  .confirmLogoutDiv{
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
+    height: 30vh;
+    position: fixed;
+    z-index: 5;
+    top: 25vh;
+    display: flex;
+    left: 30vh;
+  }
+  
+  .logoutImageDiv{
+    width: 60%;
+  }
+  
+  .logoutImage{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logoutInfoDiv{
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    padding-top: 10%;
+  }
+  
+  .logoutHeading{
+    color: black;
+    font-size: 20px;
+  }
+  
+  .logoutButtonDiv{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 4vh;
+  }
+  
+  .yesLogoutBtn{
+    padding: 10px;
+    font-size: 15px;
+    color: red;
+    border: 1px solid red;
+    background-color: white;
+    width: 40%;
+  }
+  
+  .noLogoutBtn{
+    padding: 10px;
+    font-size: 15px;
+    color: green;
+    border: 1px solid green;
+    background-color: white;
+    width: 40%;
+  }
+  
+  .noLogoutBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: green;
+  }
+  
+  .yesLogoutBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+  }
+}
+
+@media all and (max-width:700px){
+  .main {
+    width: 100%;
+    position: relative;
+  }
+  
+  .locationOverlay {
+    position: fixed;
+    top: 9.5%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+  }
+  
+  .recSearchDiv {
+    width: 51%;
+    margin: auto;
+    background-color: white;
+    left: 26.2%;
+    z-index: 3;
+    top: 6.8vh;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 1000px;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  
+  .hoverHeading {
+    color: gray;
+    letter-spacing: 1px;
+  }
+  
+  .buttonDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+  }
+  
+  .hoverHeadingDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancel:hover {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .btn {
+    letter-spacing: 1px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid rgb(230, 229, 229);
+    color: #e91e63;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profileDiv {
+    width: 20%;
+    padding: 10px;
+    position: fixed;
+    left: 76%;
+    background-color: white;
+    z-index: 15;
+    text-align: left;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+  }
+  
+  .logoutDiv {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logoutBtn {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+  }
+  
+  .logoutBtn:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .profileNameDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+  }
+  
+  .profileName {
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .cancelProfile:hover{
+    cursor: pointer;
+    color: red;
+  }
+  
+  .confirmLogoutDiv{
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
+    height: 30vh;
+    position: fixed;
+    z-index: 5;
+    top: 25vh;
+    display: flex;
+    left: 12vh;
+  }
+  
+  .logoutImageDiv{
+    width: 60%;
+  }
+  
+  .logoutImage{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logoutInfoDiv{
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    padding-top: 10%;
+  }
+  
+  .logoutHeading{
+    color: black;
+    font-size: 20px;
+  }
+  
+  .logoutButtonDiv{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 4vh;
+  }
+  
+  .yesLogoutBtn{
+    padding: 10px;
+    font-size: 15px;
+    color: red;
+    border: 1px solid red;
+    background-color: white;
+    width: 40%;
+  }
+  
+  .noLogoutBtn{
+    padding: 10px;
+    font-size: 15px;
+    color: green;
+    border: 1px solid green;
+    background-color: white;
+    width: 40%;
+  }
+  
+  .noLogoutBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: green;
+  }
+  
+  .yesLogoutBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+  }
+}
+
+@media all and (max-width:500px){
+  .main {
+    width: 100%;
+    position: relative;
+  }
+  
+  .locationOverlay {
+    position: fixed;
+    top: 9.5%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+  }
+  
+  .recSearchDiv {
+    width: 51%;
+    margin: auto;
+    background-color: white;
+    left: 26.2%;
+    z-index: 3;
+    top: 6.8vh;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 1000px;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  
+  .hoverHeading {
+    color: gray;
+    letter-spacing: 1px;
+  }
+  
+  .buttonDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+  }
+  
+  .hoverHeadingDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancel:hover {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .btn {
+    letter-spacing: 1px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid rgb(230, 229, 229);
+    color: #e91e63;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profileDiv {
+    width: 20%;
+    padding: 10px;
+    position: fixed;
+    left: 76%;
+    background-color: white;
+    z-index: 15;
+    text-align: left;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+  }
+  
+  .logoutDiv {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logoutBtn {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+  }
+  
+  .logoutBtn:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .profileNameDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+  }
+  
+  .profileName {
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .cancelProfile:hover{
+    cursor: pointer;
+    color: red;
+  }
+  
+  .confirmLogoutDiv{
+    width: 75%;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
+    height: 30vh;
+    position: fixed;
+    z-index: 5;
+    top: 25vh;
+    display: flex;
+    left: 5vh;
+  }
+  
+  .logoutImageDiv{
+    width: 60%;
+  }
+  
+  .logoutImage{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logoutInfoDiv{
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    padding-top: 10%;
+  }
+  
+  .logoutHeading{
+    color: black;
+    font-size: 15px;
+  }
+  
+  .logoutButtonDiv{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 4vh;
+  }
+  
+  .yesLogoutBtn{
+    padding: 10px;
+    font-size: 15px;
+    color: red;
+    border: 1px solid red;
+    background-color: white;
+    width: 40%;
+  }
+  
+  .noLogoutBtn{
+    padding: 10px;
+    font-size: 15px;
+    color: green;
+    border: 1px solid green;
+    background-color: white;
+    width: 40%;
+  }
+  
+  .noLogoutBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: green;
+  }
+  
+  .yesLogoutBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+  }
+}

@@ -76,7 +76,7 @@ let Location = () => {
     {
       name: "Ghaziabad",
       imageUrl:
-        "https://cdn1.iconfinder.com/data/icons/miscellaneous-251-color-shadow/128/parish_church_christianity_confession_worship_steeple_evangelical-512.png",
+        "https://th.bing.com/th/id/R.9a20106bc56bb92f6f705779452e33f6?rik=b1t2HAgXOHKbww&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2ficons8%2fwindows-8%2f512%2fCity-City-Hall-icon.png&ehk=dRyfYt4OKHPAhnxfn%2flsglaPziD0c83PtCQQpNe2fco%3d&risl=&pid=ImgRaw&r=0",
     },
     {
       name: "Gandhinagar",

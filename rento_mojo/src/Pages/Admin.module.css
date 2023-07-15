@@ -1,0 +1,795 @@
+.main{
+    width: 100%;
+}
+
+.flexBoxDiv{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.dataDiv{
+    width: 60%;
+    height: 100%;
+    text-align: left;
+}
+
+.allProductsDiv{
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 1px solid rgb(234, 231, 231);
+    border-radius: 10px;
+    background-color: rgb(250, 253, 255);
+}
+
+.allProductsHeading{
+    font-weight: 600;
+}
+
+.clickHere{
+    color: blue;
+}
+
+.clickHere:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.allProductsDataDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2%;
+    height: 60vh;
+    overflow: scroll;
+    margin-top: 2vh;
+}
+
+.allProductCard{
+    border: 1px solid rgb(234, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.allProductCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.imageDiv{
+    height: 15vh;
+    width: 40%;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+}
+
+.nameDiv{
+    width: 55%;
+    height: 15vh;
+    overflow: scroll;
+}
+
+.name{
+    margin: auto;
+    font-weight: 400;
+}
+
+.desc{
+    font-weight: 200;
+    font-size: 12px;
+    color: rgb(75, 74, 74);
+}
+
+.monthlyRent{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.cartDataDiv{
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 1px solid rgb(234, 231, 231);
+    background-color: rgb(250, 253, 255);
+    border-radius: 10px;
+}
+
+.allProductCartCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(234, 231, 231);
+    height: 15vh;
+}
+
+.allProductCartCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.allProductsCartDataDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2%;
+    height: 17vh;
+    overflow: scroll;
+    margin-top: 2vh;
+}
+
+.cartDataDiv{
+    margin-top: 1vh;
+}
+
+.loginName{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.loginDataCardDiv{
+    width: 40%;
+}
+
+.loginDiv{
+    width: 90%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 1px solid rgb(207, 207, 207);
+    text-align: left;
+    border-radius: 10px;
+    padding-bottom: 2%;
+    margin: auto;
+    background-color: rgb(250, 253, 255);
+    margin-bottom: 1vh;
+}
+
+.loginDataDiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2%;
+    height: 15vh;
+    overflow: scroll;
+}
+
+.loginDivCard{
+    border: 1px solid rgb(234, 231, 231);
+    height: 10vh;
+    line-height: 1.5vh;
+    overflow: scroll;
+}
+
+.loginDivCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.loginText{
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.loginEmail{
+    width: 170%;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.moveHome{
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.moveHome:hover{
+    cursor: pointer;
+    color: red;
+}
+
+@media all and (max-width:1070px){
+    *{
+        font-size: 10px;
+    }
+    .main{
+        width: 100%;
+    }
+    
+    .flexBoxDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    
+    .dataDiv{
+        width: 60%;
+        height: 100%;
+        text-align: left;
+    }
+    
+    .allProductsDiv{
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(234, 231, 231);
+        border-radius: 10px;
+        background-color: rgb(250, 253, 255);
+    }
+    
+    .allProductsHeading{
+        font-weight: 600;
+    }
+    
+    .clickHere{
+        color: blue;
+    }
+    
+    .clickHere:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .allProductsDataDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 60vh;
+        overflow: scroll;
+        margin-top: 2vh;
+    }
+    
+    .allProductCard{
+        border: 1px solid rgb(234, 231, 231);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .allProductCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .imageDiv{
+        height: 10vh;
+        width: 40%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nameDiv{
+        width: 55%;
+        height: 10vh;
+        overflow: scroll;
+    }
+    
+    .name{
+        margin: auto;
+        font-weight: 400;
+    }
+    
+    .desc{
+        font-weight: 200;
+        font-size: 12px;
+        color: rgb(75, 74, 74);
+    }
+    
+    .monthlyRent{
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    .cartDataDiv{
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(234, 231, 231);
+        background-color: rgb(250, 253, 255);
+        border-radius: 10px;
+    }
+    
+    .allProductCartCard{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid rgb(234, 231, 231);
+        height: 15vh;
+    }
+    
+    .allProductCartCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .allProductsCartDataDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 17vh;
+        overflow: scroll;
+        margin-top: 2vh;
+    }
+    
+    .cartDataDiv{
+        margin-top: 1vh;
+    }
+    
+    .loginName{
+        font-weight: 500;
+        font-size: 13px;
+    }
+    
+    .loginDataCardDiv{
+        width: 40%;
+    }
+    
+    .loginDiv{
+        width: 90%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(207, 207, 207);
+        text-align: left;
+        border-radius: 10px;
+        padding-bottom: 2%;
+        margin: auto;
+        background-color: rgb(250, 253, 255);
+        margin-bottom: 1vh;
+    }
+    
+    .loginDataDiv{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 15vh;
+        overflow: scroll;
+    }
+    
+    .loginDivCard{
+        border: 1px solid rgb(234, 231, 231);
+        height: 10vh;
+        line-height: 1.5vh;
+        overflow: scroll;
+    }
+    
+    .loginDivCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .loginText{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    
+    .loginEmail{
+        width: 170%;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    
+    .moveHome{
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+    
+    .moveHome:hover{
+        cursor: pointer;
+        color: red;
+    }
+}
+
+@media all and (max-width:650px){
+    .main{
+        width: 100%;
+    }
+    
+    .flexBoxDiv{
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    
+    .dataDiv{
+        width: 90%;
+        height: 100%;
+        text-align: left;
+    }
+    
+    .allProductsDiv{
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(234, 231, 231);
+        border-radius: 10px;
+        background-color: rgb(250, 253, 255);
+    }
+    
+    .allProductsHeading{
+        font-weight: 600;
+    }
+    
+    .clickHere{
+        color: blue;
+    }
+    
+    .clickHere:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .allProductsDataDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 60vh;
+        overflow: scroll;
+        margin-top: 2vh;
+    }
+    
+    .allProductCard{
+        border: 1px solid rgb(234, 231, 231);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .allProductCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .imageDiv{
+        height: 10vh;
+        width: 40%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nameDiv{
+        width: 55%;
+        height: 10vh;
+        overflow: scroll;
+    }
+    
+    .name{
+        margin: auto;
+        font-weight: 400;
+    }
+    
+    .desc{
+        font-weight: 200;
+        font-size: 12px;
+        color: rgb(75, 74, 74);
+    }
+    
+    .monthlyRent{
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    .cartDataDiv{
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(234, 231, 231);
+        background-color: rgb(250, 253, 255);
+        border-radius: 10px;
+    }
+    
+    .allProductCartCard{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid rgb(234, 231, 231);
+        height: 15vh;
+    }
+    
+    .allProductCartCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .allProductsCartDataDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 17vh;
+        overflow: scroll;
+        margin-top: 2vh;
+    }
+    
+    .cartDataDiv{
+        margin-top: 1vh;
+    }
+    
+    .loginName{
+        font-weight: 500;
+        font-size: 13px;
+    }
+    
+    .loginDataCardDiv{
+        margin-top: 1vh;
+        width: 90%;
+    }
+    
+    .loginDiv{
+        width: 90%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(207, 207, 207);
+        text-align: left;
+        border-radius: 10px;
+        padding-bottom: 2%;
+        margin: auto;
+        background-color: rgb(250, 253, 255);
+        margin-bottom: 1vh;
+    }
+    
+    .loginDataDiv{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 15vh;
+        overflow: scroll;
+    }
+    
+    .loginDivCard{
+        border: 1px solid rgb(234, 231, 231);
+        height: 10vh;
+        line-height: 1.5vh;
+        overflow: scroll;
+    }
+    
+    .loginDivCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .loginText{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    
+    .loginEmail{
+        width: 170%;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    
+    .moveHome{
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+    
+    .moveHome:hover{
+        cursor: pointer;
+        color: red;
+    }
+}
+
+
+@media all and (max-width:450px){
+    .main{
+        width: 100%;
+    }
+    
+    .flexBoxDiv{
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    
+    .dataDiv{
+        width: 100%;
+        height: 100%;
+        text-align: left;
+    }
+    
+    .allProductsDiv{
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(234, 231, 231);
+        border-radius: 10px;
+        background-color: rgb(250, 253, 255);
+    }
+    
+    .allProductsHeading{
+        font-weight: 600;
+    }
+    
+    .clickHere{
+        color: blue;
+    }
+    
+    .clickHere:hover{
+        color: red;
+        cursor: pointer;
+    }
+    
+    .allProductsDataDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 60vh;
+        overflow: scroll;
+        margin-top: 2vh;
+    }
+    
+    .allProductCard{
+        border: 1px solid rgb(234, 231, 231);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .allProductCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .imageDiv{
+        height: 10vh;
+        width: 40%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nameDiv{
+        width: 55%;
+        height: 10vh;
+        overflow: scroll;
+    }
+    
+    .name{
+        margin: auto;
+        font-weight: 400;
+    }
+    
+    .desc{
+        font-weight: 200;
+        font-size: 12px;
+        color: rgb(75, 74, 74);
+    }
+    
+    .monthlyRent{
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    .cartDataDiv{
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(234, 231, 231);
+        background-color: rgb(250, 253, 255);
+        border-radius: 10px;
+    }
+    
+    .allProductCartCard{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid rgb(234, 231, 231);
+        height: 10vh;
+    }
+    
+    .allProductCartCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .allProductsCartDataDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 17vh;
+        overflow: scroll;
+        margin-top: 2vh;
+    }
+    
+    .cartDataDiv{
+        margin-top: 1vh;
+    }
+    
+    .loginName{
+        font-weight: 500;
+        font-size: 13px;
+    }
+    
+    .loginDataCardDiv{
+        margin-top: 1vh;
+        width: 90%;
+    }
+    
+    .loginDiv{
+        width: 90%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: 1px solid rgb(207, 207, 207);
+        text-align: left;
+        border-radius: 10px;
+        padding-bottom: 2%;
+        margin: auto;
+        background-color: rgb(250, 253, 255);
+        margin-bottom: 1vh;
+    }
+    
+    .loginDataDiv{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+        height: 15vh;
+        overflow: scroll;
+    }
+    
+    .loginDivCard{
+        border: 1px solid rgb(234, 231, 231);
+        height: 10vh;
+        line-height: 1.5vh;
+        overflow: scroll;
+    }
+    
+    .loginDivCard:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .loginText{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    
+    .loginEmail{
+        width: 170%;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    
+    .moveHome{
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+    
+    .moveHome:hover{
+        cursor: pointer;
+        color: red;
+    }
+}

@@ -205,3 +205,627 @@
     cursor: pointer;
     color: red;
 }
+
+@media all and (max-width:1000px){
+    .main{
+        width: 100%;
+    }
+    
+    *::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .noItemsDiv{
+        width: 50%;
+        height: 50vh;
+        margin-top: 25vh;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .noItemImage{
+        width: 60%;
+        height: 80%;
+    }
+    
+    .noItemHeading{
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .noItemDesc{
+        width: 50%;
+        margin: auto;
+        font-weight: 200;
+    }
+    
+    .mainCartDiv{
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.689) 0px 5px 15px 5000px;
+        position: fixed;
+        margin: auto;
+        top: 20vh;
+        left: 5vh;
+        height: 60vh;
+        overflow: scroll;
+        background-color: white;
+    }
+    
+    .cartCard{
+        width: 95%;
+        margin: auto;
+        margin-top: 2vh;
+        display: flex;
+        align-items: center;
+        height: 80%;
+        gap: 2%;
+        justify-content: space-between;
+        border: 1px solid rgb(226, 226, 226);
+    }
+    
+    .searchDiv{
+        width: 95%;
+        height: 10%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2vh;
+    }
+    
+    .search{
+        width: 90%;
+        height: 95%;
+        padding-left: 2%;
+        border: 1px solid rgb(225, 225, 225);
+        border-radius: 10px;
+    }
+    
+    .search:focus{
+        outline:none;
+        border: 1px solid rgb(225, 225, 225);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .search::placeholder{
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    
+    .addonDiv{
+        display: flex;
+        width: 95%;
+        height: 50px;
+        margin: auto;
+        margin-top: 1vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .totalHeading{
+        font-size: 20px;
+        font-weight: 200;
+    }
+    
+    .totalAmount{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    .proceedBtn{
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        color: white;
+        background-color: red;
+        border: 1px solid red;
+    }
+    
+    .proceedBtn:hover{
+        color: red;
+        background-color: white;
+        border: 1px solid red;
+        cursor: pointer;
+    }
+    
+    .cartCardDiv{
+        height: 44vh;
+        overflow: scroll;
+    }
+    
+    .btnDiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .imageDiv{
+        width: 75%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nameDiv{
+        text-align: left;
+        height: 100%;
+        width: 90%;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    
+    .descDiv{
+        font-size: 15px;
+        font-weight: 200;
+        width: 100%;
+        text-align: justify;
+        margin-top: -1vh;
+    }
+    
+    .rentDiv{
+        width: 30%;
+        height: 70%;
+    }
+    
+    .btnDiv{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .btn{
+        width: 30%;
+        background-color: white;
+        border: 1px solid green;
+        border-radius: 4px;
+    }
+    
+    .btn:hover{
+        cursor: pointer;
+    }
+    
+    .deleteDiv{
+        width: 100%;
+        height: 3vh;
+        margin: auto;
+        margin-top: 2vh;
+        background-color: white;
+        border: 1px solid red;
+    }
+    
+    .deleteButton{
+        margin: auto;
+        color: red;
+    }
+    
+    .deleteDiv:hover{
+        cursor: pointer;
+    }
+    
+    .cancel:hover{
+        cursor: pointer;
+        color: red;
+    }
+}
+
+@media all and (max-width:850px){
+    .main{
+        width: 100%;
+    }
+    
+    .noItemsDiv{
+        width: 50%;
+        height: 50vh;
+        margin-top: 25vh;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .noItemImage{
+        width: 60%;
+        height: 80%;
+    }
+    
+    .noItemHeading{
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .noItemDesc{
+        width: 50%;
+        margin: auto;
+        font-weight: 200;
+    }
+    
+    .mainCartDiv{
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.689) 0px 5px 15px 5000px;
+        position: fixed;
+        margin: auto;
+        top: 20vh;
+        left: 5vh;
+        height: 60vh;
+        overflow: scroll;
+        background-color: white;
+    }
+    
+    .cartCard{
+        width: 95%;
+        margin: auto;
+        margin-top: 2vh;
+        display: flex;
+        align-items: center;
+        height: 80%;
+        overflow: scroll;
+        gap: 2%;
+        justify-content: space-between;
+        border: 1px solid rgb(226, 226, 226);
+    }
+    
+    .searchDiv{
+        width: 95%;
+        height: 10%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2vh;
+    }
+    
+    .search{
+        width: 90%;
+        height: 95%;
+        padding-left: 2%;
+        border: 1px solid rgb(225, 225, 225);
+        border-radius: 10px;
+    }
+    
+    .search:focus{
+        outline:none;
+        border: 1px solid rgb(225, 225, 225);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .search::placeholder{
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    
+    .addonDiv{
+        display: flex;
+        width: 95%;
+        height: 50px;
+        margin: auto;
+        margin-top: 1vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .totalHeading{
+        font-size: 20px;
+        font-weight: 200;
+    }
+    
+    .totalAmount{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    .proceedBtn{
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        color: white;
+        background-color: red;
+        border: 1px solid red;
+    }
+    
+    .proceedBtn:hover{
+        color: red;
+        background-color: white;
+        border: 1px solid red;
+        cursor: pointer;
+    }
+    
+    .cartCardDiv{
+        height: 44vh;
+        overflow: scroll;
+    }
+    
+    .btnDiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .imageDiv{
+        width: 75%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nameDiv{
+        text-align: left;
+        height: 100%;
+        width: 90%;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    
+    .descDiv{
+        font-size: 15px;
+        font-weight: 200;
+        width: 100%;
+        text-align: justify;
+        margin-top: -1vh;
+    }
+    
+    .rentDiv{
+        width: 30%;
+        height: 70%;
+    }
+    
+    .btnDiv{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .btn{
+        width: 30%;
+        background-color: white;
+        border: 1px solid green;
+        border-radius: 4px;
+    }
+    
+    .btn:hover{
+        cursor: pointer;
+    }
+    
+    .deleteDiv{
+        width: 100%;
+        height: 3vh;
+        margin: auto;
+        margin-top: 2vh;
+        background-color: white;
+        border: 1px solid red;
+    }
+    
+    .deleteButton{
+        margin: auto;
+        color: red;
+    }
+    
+    .deleteDiv:hover{
+        cursor: pointer;
+    }
+    
+    .cancel:hover{
+        cursor: pointer;
+        color: red;
+    }
+}
+
+@media all and (max-width:500px){
+    .main{
+        width: 100%;
+    }
+    
+    .noItemsDiv{
+        width: 50%;
+        height: 50vh;
+        margin-top: 25vh;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .noItemImage{
+        width: 60%;
+        height: 80%;
+    }
+    
+    .noItemHeading{
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .noItemDesc{
+        width: 50%;
+        margin: auto;
+        font-weight: 200;
+    }
+    
+    .mainCartDiv{
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.689) 0px 5px 15px 5000px;
+        position: fixed;
+        margin: auto;
+        top: 20vh;
+        left: 2.5vh;
+        height: 60vh;
+        overflow: scroll;
+        background-color: white;
+    }
+    
+    .cartCard{
+        width: 95%;
+        margin: auto;
+        margin-top: 2vh;
+        display: flex;
+        align-items: center;
+        height: 40%;
+        overflow: scroll;
+        gap: 2%;
+        justify-content: space-between;
+        border: 1px solid rgb(226, 226, 226);
+    }
+    
+    .searchDiv{
+        width: 95%;
+        height: 10%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2vh;
+    }
+    
+    .search{
+        width: 90%;
+        height: 95%;
+        padding-left: 2%;
+        border: 1px solid rgb(225, 225, 225);
+        border-radius: 10px;
+    }
+    
+    .search:focus{
+        outline:none;
+        border: 1px solid rgb(225, 225, 225);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .search::placeholder{
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    
+    .addonDiv{
+        display: flex;
+        width: 95%;
+        height: 50px;
+        margin: auto;
+        margin-top: 1vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .totalHeading{
+        font-size: 20px;
+        font-weight: 200;
+    }
+    
+    .totalAmount{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .proceedBtn{
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        color: white;
+        background-color: red;
+        border: 1px solid red;
+    }
+    
+    .proceedBtn:hover{
+        color: red;
+        background-color: white;
+        border: 1px solid red;
+        cursor: pointer;
+    }
+    
+    .cartCardDiv{
+        height: 44vh;
+        overflow: scroll;
+    }
+    
+    .btnDiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .imageDiv{
+        width: 75%;
+        height: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nameDiv{
+        text-align: left;
+        height: 100%;
+        width: 90%;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    
+    .descDiv{
+        font-size: 15px;
+        font-weight: 200;
+        width: 100%;
+        text-align: justify;
+        margin-top: -1vh;
+    }
+    
+    .rentDiv{
+        width: 30%;
+        height: 70%;
+    }
+    
+    .btnDiv{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .btn{
+        width: 30%;
+        background-color: white;
+        border: 1px solid green;
+        border-radius: 4px;
+    }
+    
+    .btn:hover{
+        cursor: pointer;
+    }
+    
+    .deleteDiv{
+        width: 100%;
+        height: 3vh;
+        margin: auto;
+        margin-top: 2vh;
+        background-color: white;
+        border: 1px solid red;
+    }
+    
+    .deleteButton{
+        margin: auto;
+        color: red;
+    }
+    
+    .deleteDiv:hover{
+        cursor: pointer;
+    }
+    
+    .cancel:hover{
+        cursor: pointer;
+        color: red;
+    }
+}

@@ -12,6 +12,7 @@ let AuthContextProvider = ({ children }) => {
   let [loginEmail,setLoginEmail]=useState("");
   let [showProfile, setShowProfile] = useState(false);
   let [showRecommended,setShowRecommended]=useState(false);
+  let [total,setTotal]=useState(0);
   let obj = {
     showCity,
     setShowCity,
@@ -26,7 +27,8 @@ let AuthContextProvider = ({ children }) => {
     loginName,setLoginName,
     loginEmail,setLoginEmail,
     showRecommended,setShowRecommended,
-    showProfile, setShowProfile
+    showProfile, setShowProfile,
+    total,setTotal
   };
   return <AuthContext.Provider value={obj}>{children}</AuthContext.Provider>;
 };

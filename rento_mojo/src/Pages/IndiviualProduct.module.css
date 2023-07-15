@@ -473,3 +473,481 @@
     color: white;
     background-color: red;
   }
+
+  @media all and (max-width:800px){
+    .main{
+        width: 100%;
+    }
+    
+    .flexDiv{
+        width: 100%;
+        display: flex;
+        margin-bottom: 5vh;
+    }
+    
+    .ImageDiv{
+        width: 75%;
+        height: 100%;
+    }
+    
+    .infoDiv{
+        width: 25%;
+    }
+    
+    .coloredDiv{
+        width: 100%;
+        height: 1vh;
+        background-color: aliceblue;
+    }
+    
+    .image{
+        width: 100%;
+    }
+    
+    .covidDiv{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        margin-top: 5vh;
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 6vh;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        gap: 1%;
+        align-items: center;
+    }
+    
+    .covidImage{
+        width: 8%;
+        height: 100%;
+    }
+    
+    .detailsDiv{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .detailsHeading{
+        font-weight: 600;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    
+    .sectionDiv{
+        width: 90%;
+        margin: auto;
+        margin-top: -2vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .sectionImgDiv{
+        width: 52%;
+        height: 400px;
+    }
+    
+    .sectionImg{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .descDiv{
+        width: 45%;
+        text-align: left;
+    }
+    
+    .sectionName{
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    
+    .sectionDesc{
+        color: rgb(105, 105, 105);
+    }
+    
+    .unorderedList{
+        margin-left: 0px;
+    }
+    
+    .featuresHeading{
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .list{
+        margin-left: -20px;
+    }
+    
+    .materialHeading{
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .priceDiv{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+    
+    .price{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .infoHeading{
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .infoHeadingDiv{
+        width: 90%;
+        margin: auto;
+        margin-top: 2vh;
+    }
+    
+    .questionDiv{
+        width: 100%;
+        background-color: aliceblue;
+        margin-top: 2vh;
+        padding: 3px;
+    }
+    
+    .question{
+        margin: auto;
+    }
+    
+    .btnDiv{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3vh;
+    }
+    
+    .months{
+        width: 30%;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: white;
+        border: 1px solid red;
+        color: red;
+    }
+    
+    .months:hover{
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .infoPricesDiv{
+        width: 90%;
+        margin: auto;
+        margin-top: 4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .pricesDiv{
+        border: 1px solid rgb(236, 234, 234);
+        width: 50%;
+    }
+    
+    .infoPrices{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    .nothing{
+        font-size: 15px;
+    }
+    
+    .siderole{
+        margin-top: -2vh;
+        font-size: 12px;
+        color: gray;
+        letter-spacing: 1px;
+    }
+    
+    .infoDescDiv{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .productDesc{
+        text-align: left;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .infoDesc{
+        text-align: left;
+        letter-spacing: 1px;
+    }
+    
+    .deliveryDiv{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .deliveryImage{
+        width: 20%;
+    }
+    
+    .deliveryText{
+        letter-spacing: 1px;
+    }
+    
+    .planDiv{
+        width: 90%;
+        margin: auto;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        background-color: red;
+        padding-left: 10px;
+        color: white;
+        padding-bottom: 3px;
+        margin-top: 1vh;
+    }
+    
+    .planDiv:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+    }
+    
+    .planDiv:active{
+        color: red;
+        background-color: white;
+        border: 1px solid red;
+    }
+    
+    .book{
+        margin: auto;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+    
+    .cartImage{
+        width: 8%;
+    }
+    
+    .recommededDiv{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .recommededHeading{
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .recommededDesc{
+        color: gray;
+        letter-spacing: 1px;
+        margin-top: -1vh;
+    }
+    
+    .recommendedCardsDiv{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .card{
+        width: 30%;
+        padding: 10px;
+        border: 1px solid rgb(205, 204, 204);
+    }
+    
+    .cardImage{
+        width: 100%;
+        height: 10vh;
+    }
+    
+    .recommendedName{
+        text-overflow: ellipsis;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-top: 1vh;
+    }
+    
+    .card:hover{
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .recommendedInfoDiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .recommededRentHeading{
+        font-weight: 200;
+        color: gray;
+    }
+    
+    .recommededRent{
+        font-weight: 400;
+        font-size: 10px;
+        margin-top: 1vh;
+    }
+    
+    .checkBtn{
+        padding: 5px;
+        color: rgb(0, 34, 255);
+        background-color: white;
+        border: 1px solid rgb(21, 0, 255);
+        font-size: 13px;
+    }
+    
+    .checkBtn:hover{
+        cursor: pointer;
+        background-color: rgb(0, 34, 255);
+        color: white;
+    }
+    
+    .profileDiv {
+        width: 20%;
+        padding: 10px;
+        position: fixed;
+        left: 76%;
+        background-color: white;
+        z-index: 15;
+        text-align: left;
+        letter-spacing: 1px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+      }
+      
+      .logoutDiv {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
+      .logoutBtn {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background-color: white;
+        color: red;
+        border: 1px solid red;
+      }
+      
+      .logoutBtn:hover {
+        cursor: pointer;
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+      }
+      
+      .profileNameDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4vh;
+      }
+      
+      .profileName {
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      
+      .cancelProfile:hover{
+        cursor: pointer;
+        color: red;
+      }
+      
+      .confirmLogoutDiv{
+        width: 50%;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
+        height: 40vh;
+        position: fixed;
+        z-index: 5;
+        top: 25vh;
+        display: flex;
+        left: 45vh;
+      }
+      
+      .logoutImageDiv{
+        width: 60%;
+      }
+      
+      .logoutImage{
+        width: 100%;
+        height: 100%;
+      }
+      
+      .logoutInfoDiv{
+        text-align: left;
+        background-color: rgb(255, 255, 255);
+        width: 40%;
+        padding-top: 10%;
+      }
+      
+      .logoutHeading{
+        color: black;
+        font-size: 20px;
+      }
+      
+      .logoutButtonDiv{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 4vh;
+      }
+      
+      .yesLogoutBtn{
+        padding: 10px;
+        font-size: 15px;
+        color: red;
+        border: 1px solid red;
+        background-color: white;
+        width: 40%;
+      }
+      
+      .noLogoutBtn{
+        padding: 10px;
+        font-size: 15px;
+        color: green;
+        border: 1px solid green;
+        background-color: white;
+        width: 40%;
+      }
+      
+      .noLogoutBtn:hover{
+        cursor: pointer;
+        color: white;
+        background-color: green;
+      }
+      
+      .yesLogoutBtn:hover{
+        cursor: pointer;
+        color: white;
+        background-color: red;
+      }
+  }

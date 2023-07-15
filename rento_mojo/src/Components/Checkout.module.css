@@ -1,0 +1,603 @@
+.main{
+    width: 30%;
+    height: 70vh;
+    position: fixed;
+    background-color: white;
+    top: 10vh;
+    padding: 1%;
+    padding-bottom: 2%;
+    left: 67vh;
+    border-radius: 10px;
+    z-index: 50;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+}
+
+.headingDiv{
+    width: 100%;
+    text-align: left;
+}
+
+.heading{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.detailsDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nameDiv{
+    width: 50%;
+    line-height: 5px;
+    text-align: center;
+}
+
+.emailDiv{
+    text-align: center;
+    width: 50%;
+    line-height: 5px;
+}
+
+.name{
+    letter-spacing: 1px;
+}
+
+.input{
+    width: 90%;
+}
+
+.cardDetailsHeading{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.total{
+    width: 100%;
+    text-align: center;
+}
+
+.buyDiv{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.buyBtn{
+     width: 90%;
+     padding: 10px;
+     font-size: 15px;
+     color: white;
+     background-color: dodgerblue;
+     border: 1px solid dodgerblue;
+}
+
+.buyBtn:hover{
+    cursor: pointer;
+    width: 90%;
+    padding: 10px;
+    font-size: 15px;
+    color: dodgerblue;
+    background-color: white;
+    border: 1px solid dodgerblue;
+}
+
+.total{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.crossDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media all and (max-width:1400px){
+    .main{
+        width: 30%;
+        height: 70vh;
+        position: fixed;
+        background-color: white;
+        top: 10vh;
+        padding: 1%;
+        padding-bottom: 2%;
+        left: 58vh;
+        border-radius: 10px;
+        z-index: 50;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+    }
+    
+    .headingDiv{
+        width: 100%;
+        text-align: left;
+    }
+    
+    .heading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .detailsDiv{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nameDiv{
+        width: 50%;
+        line-height: 5px;
+        text-align: center;
+    }
+    
+    .emailDiv{
+        text-align: center;
+        width: 50%;
+        line-height: 5px;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+    }
+    
+    .input{
+        width: 90%;
+    }
+    
+    .cardDetailsHeading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .total{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .buyDiv{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .buyBtn{
+         width: 90%;
+         padding: 10px;
+         font-size: 15px;
+         color: white;
+         background-color: dodgerblue;
+         border: 1px solid dodgerblue;
+    }
+    
+    .buyBtn:hover{
+        cursor: pointer;
+        width: 90%;
+        padding: 10px;
+        font-size: 15px;
+        color: dodgerblue;
+        background-color: white;
+        border: 1px solid dodgerblue;
+    }
+    
+    .total{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .crossDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width:1200px){
+    .main{
+        width: 30%;
+        height: 70vh;
+        position: fixed;
+        background-color: white;
+        top: 10vh;
+        padding: 1%;
+        padding-bottom: 2%;
+        left: 48vh;
+        border-radius: 10px;
+        z-index: 50;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+    }
+    
+    .headingDiv{
+        width: 100%;
+        text-align: left;
+    }
+    
+    .heading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .detailsDiv{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nameDiv{
+        width: 50%;
+        line-height: 5px;
+        text-align: center;
+    }
+    
+    .emailDiv{
+        text-align: center;
+        width: 50%;
+        line-height: 5px;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+    }
+    
+    .input{
+        width: 90%;
+    }
+    
+    .cardDetailsHeading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .total{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .buyDiv{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .buyBtn{
+         width: 90%;
+         padding: 10px;
+         font-size: 15px;
+         color: white;
+         background-color: dodgerblue;
+         border: 1px solid dodgerblue;
+    }
+    
+    .buyBtn:hover{
+        cursor: pointer;
+        width: 90%;
+        padding: 10px;
+        font-size: 15px;
+        color: dodgerblue;
+        background-color: white;
+        border: 1px solid dodgerblue;
+    }
+    
+    .total{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .crossDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width:1000px){
+    .main{
+        width: 30%;
+        height: 70vh;
+        position: fixed;
+        background-color: white;
+        top: 10vh;
+        padding: 1%;
+        padding-bottom: 2%;
+        left: 40vh;
+        border-radius: 10px;
+        z-index: 50;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+    }
+    
+    .headingDiv{
+        width: 100%;
+        text-align: left;
+    }
+    
+    .heading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .detailsDiv{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nameDiv{
+        width: 50%;
+        line-height: 5px;
+        text-align: center;
+    }
+    
+    .emailDiv{
+        text-align: center;
+        width: 50%;
+        line-height: 5px;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+    }
+    
+    .input{
+        width: 90%;
+    }
+    
+    .cardDetailsHeading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .total{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .buyDiv{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .buyBtn{
+         width: 90%;
+         padding: 10px;
+         font-size: 15px;
+         color: white;
+         background-color: dodgerblue;
+         border: 1px solid dodgerblue;
+    }
+    
+    .buyBtn:hover{
+        cursor: pointer;
+        width: 90%;
+        padding: 10px;
+        font-size: 15px;
+        color: dodgerblue;
+        background-color: white;
+        border: 1px solid dodgerblue;
+    }
+    
+    .total{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .crossDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width:800px){
+    .main{
+        width: 50%;
+        height: 70vh;
+        position: fixed;
+        background-color: white;
+        top: 10vh;
+        padding: 1%;
+        padding-bottom: 2%;
+        left: 20vh;
+        border-radius: 10px;
+        z-index: 50;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+    }
+    
+    .headingDiv{
+        width: 100%;
+        text-align: left;
+    }
+    
+    .heading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .detailsDiv{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nameDiv{
+        width: 50%;
+        line-height: 5px;
+        text-align: center;
+    }
+    
+    .emailDiv{
+        text-align: center;
+        width: 50%;
+        line-height: 5px;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+    }
+    
+    .input{
+        width: 90%;
+    }
+    
+    .cardDetailsHeading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .total{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .buyDiv{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .buyBtn{
+         width: 90%;
+         padding: 10px;
+         font-size: 15px;
+         color: white;
+         background-color: dodgerblue;
+         border: 1px solid dodgerblue;
+    }
+    
+    .buyBtn:hover{
+        cursor: pointer;
+        width: 90%;
+        padding: 10px;
+        font-size: 15px;
+        color: dodgerblue;
+        background-color: white;
+        border: 1px solid dodgerblue;
+    }
+    
+    .total{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .crossDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width:500px){
+    .main{
+        width: 70%;
+        height: 70vh;
+        position: fixed;
+        background-color: white;
+        top: 10vh;
+        padding: 1%;
+        padding-bottom: 2%;
+        left: 8vh;
+        border-radius: 10px;
+        z-index: 50;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+    }
+    
+    .headingDiv{
+        width: 100%;
+        text-align: left;
+    }
+    
+    .heading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .detailsDiv{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nameDiv{
+        width: 50%;
+        line-height: 5px;
+        text-align: center;
+    }
+    
+    .emailDiv{
+        text-align: center;
+        width: 50%;
+        line-height: 5px;
+    }
+    
+    .name{
+        letter-spacing: 1px;
+    }
+    
+    .input{
+        width: 90%;
+    }
+    
+    .cardDetailsHeading{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .total{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .buyDiv{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .buyBtn{
+         width: 90%;
+         padding: 10px;
+         font-size: 15px;
+         color: white;
+         background-color: dodgerblue;
+         border: 1px solid dodgerblue;
+    }
+    
+    .buyBtn:hover{
+        cursor: pointer;
+        width: 90%;
+        padding: 10px;
+        font-size: 15px;
+        color: dodgerblue;
+        background-color: white;
+        border: 1px solid dodgerblue;
+    }
+    
+    .total{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .crossDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

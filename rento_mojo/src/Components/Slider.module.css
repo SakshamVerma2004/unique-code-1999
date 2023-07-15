@@ -13,3 +13,57 @@
   height: 100%;
   border-radius: 50px;
 }
+
+@media all and (max-width:1000px){
+  .main {
+    width: 80%;
+    height: 40vh;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 2vh;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .currentImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+  }
+}
+
+@media all and (max-width:600px){
+  .main {
+    width: 80%;
+    height: 35vh;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 2vh;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .currentImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+  }
+}
+
+@media all and (max-width:450px){
+  .main {
+    width: 80%;
+    height: 20vh;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 2vh;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .currentImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+  }
+}
