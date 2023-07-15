@@ -123,6 +123,10 @@ let IndiviualProduct = () => {
       });
   }, [loginName, loginEmail, data.name, data.desc]);
   let cartHandler = () => {
+    if(!isLogin){
+      swal("Pending Login","You need to Login first to add items in the cart","error");
+      return ;
+    }
     if (already) {
       navigate("/cart");
       return;
