@@ -596,7 +596,7 @@
 @media all and (max-width:450px){
   .main {
     width: 80%;
-    height: 35vh;
+    height: 40vh;
     margin: auto;
     border-radius: 10px;
     position: fixed;

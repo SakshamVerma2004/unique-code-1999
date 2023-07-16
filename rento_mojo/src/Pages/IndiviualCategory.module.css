@@ -1126,12 +1126,12 @@
       .confirmLogoutDiv{
         width: 50%;
         box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
-        height: 40vh;
+        height: 30vh;
         position: fixed;
         z-index: 5;
         top: 25vh;
         display: flex;
-        left: 45vh;
+        left: 30vh;
       }
       
       .logoutImageDiv{
@@ -1194,6 +1194,32 @@
       }
   }
 
+  @media all and (max-width:750px){
+    .confirmLogoutDiv{
+        width: 50%;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
+        height: 30vh;
+        position: fixed;
+        z-index: 5;
+        top: 25vh;
+        display: flex;
+        left: 20vh;
+      }
+  }
+  
+  @media all and (max-width:550px){
+    .confirmLogoutDiv{
+        width: 70%;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
+        height: 30vh;
+        position: fixed;
+        z-index: 5;
+        top: 25vh;
+        display: flex;
+        left: 10vh;
+      }
+  }
+
   @media all and (max-width:450px){
     .categoryDiv{
         width: 18%;
@@ -1227,4 +1253,15 @@
         font-weight: 600;
         font-size: 10px;
     }
+
+    .confirmLogoutDiv{
+        width: 80%;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 5000px;
+        height: 30vh;
+        position: fixed;
+        z-index: 5;
+        top: 20vh;
+        display: flex;
+        left: 5vh;
+      }
   }
