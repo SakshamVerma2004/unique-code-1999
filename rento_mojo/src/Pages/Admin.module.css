@@ -1,5 +1,11 @@
+*::-webkit-scrollbar{
+    display: none;
+}
+
+
 .main{
     width: 100%;
+    overflow: scroll;
 }
 
 .flexBoxDiv{
