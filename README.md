@@ -37,9 +37,9 @@ To test all my skills learned during completion of react course.
 ![Screenshot_20230715_073539](https://github.com/SakshamVerma2004/unique-code-1999/assets/123861787/0b7bbacb-f93d-4c9e-80c2-871124924696)
 ![Screenshot_20230715_073603](https://github.com/SakshamVerma2004/unique-code-1999/assets/123861787/debe8a97-0d5c-4e8a-b0af-251f9f235a2b)
 ![Screenshot_20230715_073625](https://github.com/SakshamVerma2004/unique-code-1999/assets/123861787/5037a959-2dda-4b0b-9280-9314be85af02)
-# Cart Page & Checkout Section
+# 4. Cart Page & Checkout Section
 ![Screenshot_20230715_073718](https://github.com/SakshamVerma2004/unique-code-1999/assets/123861787/56cca705-f714-493c-9185-d3aaffc34003)
 ![Screenshot_20230715_073745](https://github.com/SakshamVerma2004/unique-code-1999/assets/123861787/ac5a80c5-7263-498a-a7ad-7802ddc06f97)
-# Admin Page
+# 5. Admin Page
 ![Screenshot_20230715_073922](https://github.com/SakshamVerma2004/unique-code-1999/assets/123861787/77681524-45cb-4ca3-a9fd-047ac2fc2787)
 ![Screenshot_20230715_074030](https://github.com/SakshamVerma2004/unique-code-1999/assets/123861787/866957d5-3bd6-4fda-b106-4fd564b49ea9)
