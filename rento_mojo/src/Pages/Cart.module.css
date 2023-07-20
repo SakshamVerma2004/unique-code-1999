@@ -780,7 +780,7 @@
     .descDiv{
         font-size: 10px;
         font-weight: 200;
-        color: gray;
+        color: rgb(84, 84, 84);
         width: 100%;
         text-align: justify;
     }
