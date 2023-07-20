@@ -166,3 +166,88 @@
         cursor: pointer;
     }
 }
+
+@media all and (max-width:500px){
+    .main{
+        width: 100%;
+        background-color: rgb(251, 244, 244);
+        margin-top: 5vh;
+        padding-bottom: 40px;
+        padding-top: 20px;
+    }
+    
+    .headingDiv{
+        display:  flex;
+        width: 95%;
+        margin: auto;
+        justify-content: space-between;
+    }
+    
+    .heading{
+        font-weight: 500;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    
+    .cardDiv{
+        display: grid;
+        grid-template-columns: repeat(4,24%);
+        width: 95%;
+        margin: auto;
+        gap: 10px;
+    }
+    
+    .card{
+        background-color: white;
+        padding: 5px;
+        text-align: left;
+    }
+    
+    .card:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
+    }
+    
+    .image{
+        width: 100%;
+        height: 10vh;
+    }
+    
+    .nameDiv{
+        height: 4vh;
+        margin-bottom: 3vh;
+    }
+    
+    .name{
+        margin: auto;
+        font-weight: 400;
+    }
+    
+    .infoDiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6vh;
+    }
+    
+    .rentHeading{
+        color: gray;
+    }
+    
+    .rent{
+        margin-top: -1vh;
+        font-size: 12px;
+    }
+    
+    .more{
+        padding: 1px;
+        color: red;
+        border: 1px solid red;
+        background-color: white;
+        font-size: 7px;
+    }
+    
+    .more:hover{
+        cursor: pointer;
+    }
+}

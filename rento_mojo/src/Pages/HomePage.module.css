@@ -600,10 +600,10 @@
   }
   
   .recSearchDiv {
-    width: 51%;
+    width: 73%;
     margin: auto;
     background-color: white;
-    left: 26.2%;
+    left: 10.2%;
     z-index: 3;
     top: 6.8vh;
     position: fixed;
