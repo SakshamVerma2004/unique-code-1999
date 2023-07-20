@@ -668,14 +668,14 @@
   }
   
   .btnDiv {
-    width: 86%;
-    margin-top: 4vh;
+    width: 93%;
+    margin-top: 2vh;
   }
   
   .btn {
     width: 100%;
-    padding: 10px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 15px;
     border: 1px solid white;
   }
   

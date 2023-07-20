@@ -3,13 +3,13 @@ import styles from "./Checkout.module.css";
 import { AuthContext } from "../Context/AuthContextProvider";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
-let Checkout = () => {
-    let navigate=useNavigate();
-    let homeHandler=()=>{
-        setTimeout(() => {
-            navigate("/");
-        }, 3000);
-    }
+let Checkout = ({closeHandler}) => {
+  let navigate = useNavigate();
+  let homeHandler = () => {
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
+  };
   let [address, setAddress] = useState("");
   let [phone, setPhone] = useState("");
   let [pin, setPin] = useState("");
@@ -49,34 +49,43 @@ let Checkout = () => {
       swal("Invalid CVV", "Please enter a valid cvv", "error");
       return;
     }
-    fetch("https://rento-mojo-default-rtdb.firebaseio.com/checkout_details.json",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
+    fetch(
+      "https://rento-mojo-default-rtdb.firebaseio.com/checkout_details.json",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        body:JSON.stringify({
-            Username:loginName,
-            Email:loginEmail,
-            Phone_Number:phone,
-            Address:address,
-            PinCode:pin,
-            Account_Number:acc,
-            Name_On_Card:name,
-            date_DAY_MM_DD_YY: new Date().toDateString(),
-              time_HH_MM_SS: new Date().toLocaleTimeString()
-        })
-    })
-    .then((res)=>{
-        swal("Order Sent","Expected Time to deliver (5 Days from Today)","success");
-        homeHandler();
-        return res.json();
-    })
+        body: JSON.stringify({
+          Username: loginName,
+          Email: loginEmail,
+          Phone_Number: phone,
+          Address: address,
+          PinCode: pin,
+          Account_Number: acc,
+          Name_On_Card: name,
+          date_DAY_MM_DD_YY: new Date().toDateString(),
+          time_HH_MM_SS: new Date().toLocaleTimeString(),
+        }),
+      }
+    ).then((res) => {
+      swal(
+        "Order Sent",
+        "Expected Time to deliver (5 Days from Today)",
+        "success"
+      );
+      homeHandler();
+      return res.json();
+    });
   };
   let { total, selectedCity, loginName, loginEmail } = useContext(AuthContext);
   return (
     <div className={styles.main}>
       <div className={styles.headingDiv}>
-        <p className={styles.heading}>RentoMojo Checkout Process</p>
+        <div className={styles.cancelDiv}>
+          <p className={styles.heading}>RentoMojo Checkout Process</p>
+          <p className={styles.cancel} onClick={closeHandler}>✕</p>
+        </div>
         <p className={styles.desc}>
           Thanks for choosing RentoMojo . We are highly appreciated by your
           renting action and will be love to see you next time also .
@@ -156,7 +165,9 @@ let Checkout = () => {
         </div>
         <p className={styles.total}>Your Total : ₹ {total}</p>
         <div className={styles.buyDiv}>
-          <button className={styles.buyBtn} onClick={submitHandler}>Buy Now</button>
+          <button className={styles.buyBtn} onClick={submitHandler}>
+            Buy Now
+          </button>
         </div>
       </div>
     </div>
