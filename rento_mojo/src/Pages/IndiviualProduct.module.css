@@ -992,6 +992,36 @@
     font-size: 7px;
     color: gray;
   }
+
+  .profileDiv {
+    width: 40%;
+    padding: 10px;
+    position: fixed;
+    left: 52%;
+    background-color: white;
+    z-index: 15;
+    text-align: left;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
+  }
+
+  .profileNameDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1vh;
+  }
+
+  .logoutBtn {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+  }
 }
 
 @media all and (max-width:500px){
