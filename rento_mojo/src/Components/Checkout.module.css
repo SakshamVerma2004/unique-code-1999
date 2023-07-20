@@ -12,6 +12,22 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 5000px;
 }
 
+.cancelDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.cancel{
+    font-size: 2vh;
+}
+
+.cancel:hover{
+    color: red;
+    cursor: pointer;
+}
+
 .headingDiv{
     width: 100%;
     text-align: left;

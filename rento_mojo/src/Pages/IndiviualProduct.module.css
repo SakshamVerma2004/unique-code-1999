@@ -1068,7 +1068,7 @@
 
   .sectionImgDiv {
     width: 52%;
-    height: 200px;
+    height: 120px;
     margin-top: -5vh;
   }
 
@@ -1186,7 +1186,7 @@
   .pricesDiv {
     border: 1px solid rgb(236, 234, 234);
     width: 50%;
-    height: 10vh;
+    height: 11vh;
   }
 
   .infoPrices {

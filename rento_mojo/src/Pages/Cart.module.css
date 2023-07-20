@@ -661,7 +661,7 @@
         margin: auto;
         top: 20vh;
         left: 2.5vh;
-        height: 60vh;
+        height: 58vh;
         overflow: scroll;
         background-color: white;
     }
@@ -672,7 +672,7 @@
         margin-top: 2vh;
         display: flex;
         align-items: center;
-        height: 40%;
+        height: 30%;
         overflow: scroll;
         gap: 2%;
         justify-content: space-between;
@@ -681,7 +681,7 @@
     
     .searchDiv{
         width: 95%;
-        height: 10%;
+        height: 5%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -719,18 +719,18 @@
     }
     
     .totalHeading{
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 200;
     }
     
     .totalAmount{
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 500;
     }
     
     .proceedBtn{
-        padding: 10px;
-        font-size: 15px;
+        padding: 5px;
+        font-size: 10px;
         background-color: white;
         color: white;
         background-color: red;
@@ -773,15 +773,16 @@
     
     .name{
         letter-spacing: 1px;
+        font-size: 12px;
         font-weight: 500;
     }
     
     .descDiv{
-        font-size: 15px;
+        font-size: 10px;
         font-weight: 200;
+        color: gray;
         width: 100%;
         text-align: justify;
-        margin-top: -1vh;
     }
     
     .rentDiv{
@@ -811,6 +812,7 @@
         height: 3vh;
         margin: auto;
         margin-top: 2vh;
+        margin-left: -2px;
         background-color: white;
         border: 1px solid red;
     }

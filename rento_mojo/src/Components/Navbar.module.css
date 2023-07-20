@@ -546,7 +546,7 @@
 
 @media all and (max-width:500px){
     .main{
-        width: 100%;
+        width: 95%;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -616,7 +616,7 @@
     .searchDiv{
         display: flex;
         border: 1px solid black;
-        width: 35%;
+        width: 25%;
         align-items: center;
         border-radius: 10px;
         height: 15px;
@@ -682,14 +682,14 @@
     }
     
     .loginButton{
-        height: 4vh;
+        height: 3vh;
         width: 100%;
         border-radius: 5px;
         color: white;
         background-color: red;
         border: none;
         padding: 1px;
-        font-size: 10px;
+        font-size: 8px;
         transition: 0.5s color;
     }
     
@@ -706,7 +706,7 @@
     }
     
     .doneLoginBtn{
-        height: 4vh;
+        height: 3vh;
         width: 100%;
         border-radius: 5px;
         color: white;

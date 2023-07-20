@@ -7,6 +7,9 @@ import { AuthContext } from "../Context/AuthContextProvider";
 import { useNavigate } from "react-router-dom";
 import Checkout from "../Components/Checkout";
 let Cart = () => {
+  let closeCheckoutHandler=()=>{
+    setShowCheckout(false);
+  }
   let navigate = useNavigate();
   let [showCheckout, setShowCheckout] = useState(false);
   let [showCartDiv, setShowCartDiv] = useState(false);
@@ -204,7 +207,7 @@ let Cart = () => {
           </div>
         </div>
       )}
-      {showCheckout && filteredData.length > 0 && <Checkout />}
+      {showCheckout && filteredData.length > 0 && <Checkout closeHandler={closeCheckoutHandler}/>}
       {showLogin ? (
         <Login
           onHide={hideLoginHandler}
