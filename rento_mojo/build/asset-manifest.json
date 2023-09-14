@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8073ef8b.css",
+    "main.js": "/static/js/main.bb83f30d.js",
+    "static/js/787.96da803a.chunk.js": "/static/js/787.96da803a.chunk.js",
+    "static/media/rocket-3972.gif": "/static/media/rocket-3972.174cccea266c420b89ce.gif",
+    "static/media/animal-3629.gif": "/static/media/animal-3629.5d4d7f79ecd52b60a55d.gif",
+    "static/media/car-1803.gif": "/static/media/car-1803.7d094a016c9db1f701df.gif",
+    "static/media/cancel.png": "/static/media/cancel.fff217d5716824823eea.png",
+    "static/media/maintenance.png": "/static/media/maintenance.3ac526953d75b25ba17c.png",
+    "static/media/placeholder.png": "/static/media/placeholder.cdac0fc06b0c17cf387e.png",
+    "static/media/virus.png": "/static/media/virus.7a8e5de329d753eff795.png",
+    "static/media/upgrade.png": "/static/media/upgrade.91303a64dda3a96ee95c.png",
+    "static/media/return.png": "/static/media/return.6bed11d5a46a7f2ce08f.png",
+    "static/media/weights.png": "/static/media/weights.fd4e9b14428e010d5197.png",
+    "static/media/double-bed.png": "/static/media/double-bed.7f2b5d3ae1b5bbbcfc2f.png",
+    "static/media/sofa.png": "/static/media/sofa.99d83c8c60f118adb633.png",
+    "static/media/work-table.png": "/static/media/work-table.a533323ea50b2d59e32a.png",
+    "static/media/shopping-cart.png": "/static/media/shopping-cart.96c73cb49987ccdf1154.png",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.8073ef8b.css.map": "/static/css/main.8073ef8b.css.map",
+    "main.bb83f30d.js.map": "/static/js/main.bb83f30d.js.map",
+    "787.96da803a.chunk.js.map": "/static/js/787.96da803a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8073ef8b.css",
+    "static/js/main.bb83f30d.js"
+  ]
+}
